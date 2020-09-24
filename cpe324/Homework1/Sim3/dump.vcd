@@ -1,0 +1,136 @@
+$date
+	Sun Feb 23 12:59:48 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module moore_tb $end
+$var wire 2 ! STATE [1:0] $end
+$var wire 1 " OUT $end
+$var reg 1 # A $end
+$var reg 1 $ B $end
+$var reg 1 % clk $end
+$scope module uut $end
+$var wire 1 # A $end
+$var wire 1 $ B $end
+$var wire 1 % clk $end
+$var reg 1 " OUT $end
+$var reg 2 & STATE [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+0%
+0$
+0#
+x"
+b0 !
+$end
+#50
+0"
+1%
+#100
+0%
+1$
+#150
+1"
+b1 !
+b1 &
+1%
+#200
+0%
+0$
+1#
+#250
+1%
+#300
+0%
+0#
+#350
+0"
+b0 !
+b0 &
+1%
+#400
+0%
+1$
+1#
+#450
+b10 !
+b10 &
+1%
+#500
+0%
+0#
+#550
+1%
+#600
+0%
+0$
+#650
+1"
+b1 !
+b1 &
+1%
+#700
+0%
+1$
+1#
+#750
+0"
+b10 !
+b10 &
+1%
+#800
+0%
+#850
+1"
+b11 !
+b11 &
+1%
+#900
+0%
+#950
+1%
+#1000
+0%
+0$
+#1050
+0"
+b10 !
+b10 &
+1%
+#1100
+0%
+1$
+#1150
+1"
+b11 !
+b11 &
+1%
+#1200
+0%
+0$
+0#
+#1250
+b1 !
+b1 &
+1%
+#1300
+0%
+#1350
+0"
+b0 !
+b0 &
+1%
+#1400
+0%
+#1450
+1%
+#1500
+0%

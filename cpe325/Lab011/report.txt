@@ -1,0 +1,21 @@
+The file is for a msp430fg2618
+The password is 9820ab891d7a
+
+
+Initial Observations:
+	Led 1 turns on. Holding s1 turns it off. 
+
+
+
+
+
+0x3100: WDTCTL = WDTPW + WDTHOLD; 
+0x3106: P2SEL |= bit2
+0x310a: TBCCTL1 = used to adjust set brightness of led.
+0x3110: TBCTL = TBSSEL1  + MC_?;
+0x3116: TBCCR0 = P1IN |= BIT2
+0x3122: P1IN |= BIT2 
+0x3126: 
+
+
+

@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "d_bit",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "vol[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[5]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[6]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

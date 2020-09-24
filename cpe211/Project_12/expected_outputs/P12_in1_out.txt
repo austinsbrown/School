@@ -1,0 +1,13 @@
+
+Enter the name of the input file: P12_in1.txt
+P12_in1.txt
+
+Add: 4+6 = 10
+Sub: 5-7 = -2
+Mul: 4.5*8.6 = 38.7
+Div: 3/4 = 0.75
+Mod: 9%5 = 4
+Invalid Calculation Type: Word
+Invalid Operator for Math Operations: (
+
+

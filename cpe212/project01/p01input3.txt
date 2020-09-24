@@ -1,0 +1,132 @@
+# p01input3.txt -- Test of Rotate Clockwise/Counter Clockwise
+
+# Open named file
+[ bigdata.csv
+
+# Draw Bars
+b 1
+
+# Read next five lines of image data
+n
+n
+n
+n
+n
+
+# Draw Bars
+b 1
+
+# Print Original Image
+p
+
+# Draw Bars
+b 1
+
+# Test Rotate Clockwise 90 Degrees Image
++
+
+# Draw Bars
+b 1
+
+# Print Rotated Image
+p
+
+# Draw Bars
+b 1
+
+# Test Rotate Clockwise 90 Degrees Image
++
+
+# Draw Bars
+b 1
+
+# Print Rotated Image
+p
+
+# Draw Bars
+b 1
+
+# Test Rotate Clockwise 90 Degrees Image
++
+
+# Draw Bars
+b 1
+
+# Print Rotated Image
+p
+
+# Draw Bars
+b 1
+
+# Test Rotate Clockwise 90 Degrees Image
++
+
+# Draw Bars
+b 1
+
+# Print Rotated Image
+p
+
+# Draw Bars
+b 2
+
+# Print Image
+p
+
+# Draw Bars
+b 1
+
+# Test Rotate Counter Clockwise 90 Degrees Image
+-
+
+# Draw Bars
+b 1
+
+# Print Rotated Image
+p
+
+# Draw Bars
+b 1
+
+# Test Rotate Counter Clockwise 90 Degrees Image
+-
+
+# Draw Bars
+b 1
+
+# Print Rotated Image
+p
+
+# Draw Bars
+b 1
+
+# Test Rotate Counter Clockwise 90 Degrees Image
+-
+
+# Draw Bars
+b 1
+
+# Print Rotated Image
+p
+
+# Draw Bars
+b 1
+
+# Test Rotate Counter Clockwise 90 Degrees Image
+-
+
+# Draw Bars
+b 1
+
+# Print Rotated Image
+p
+
+# Draw Bars
+b 1
+
+# Close file
+]
+
+# Draw bars
+b 2
+

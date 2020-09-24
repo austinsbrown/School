@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jan 21 08:38:30 2020
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Standard Edition
+Revision Name : Lab2B
+Top-level Entity Name : Lab2B
+Family : Cyclone IV E
+Total logic elements : 18
+    Total combinational functions : 18
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 27
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

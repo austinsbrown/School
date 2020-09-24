@@ -1,0 +1,60 @@
+############################################################
+
+# p03input3.txt -- Test BigStack class member functions
+
+# Test MakeEmpty()
+BigStack::BigStack() -- Status = Completed
+BigStack::Size() -- Status = Completed, Size = 0
+BigStack::Push('a') -- Status = Completed
+BigStack::Push('b') -- Status = Completed
+BigStack::Push('c') -- Status = Completed
+BigStack::Push('d') -- Status = Completed
+BigStack::Push('e') -- Status = Completed
+BigStack::Push('f') -- Status = Failed due to exception
+BigStack::Push('g') -- Status = Failed due to exception
+BigStack::Push('h') -- Status = Failed due to exception
+BigStack::Push('i') -- Status = Failed due to exception
+BigStack::Push('j') -- Status = Failed due to exception
+BigStack::Push('k') -- Status = Failed due to exception
+BigStack::Print() -- Top [ ( e d c b a ) ] Bottom [ ( a b c d e )] Top
+BigStack::Size() -- Status = Completed, Size = 5
+BigStack::MakeEmpty() -- Status = Completed
+BigStack::Print() -- Top [  ] Bottom [ ] Top
+BigStack::Size() -- Status = Completed, Size = 0
+BigStack::~BigStack() -- Status = Completed
+########################################
+# Test IsEmpty()
+BigStack::BigStack() -- Status = Completed
+BigStack::Size() -- Status = Completed, Size = 0
+BigStack::IsEmpty() -- Status = Empty
+BigStack::Pop() -- Status = Failed
+BigStack::Pop() -- Status = Failed
+BigStack::Print() -- Top [  ] Bottom [ ] Top
+BigStack::IsEmpty() -- Status = Empty
+BigStack::Size() -- Status = Completed, Size = 0
+BigStack::Push('l') -- Status = Completed
+BigStack::Push('m') -- Status = Completed
+BigStack::Print() -- Top [ ( m l ) ] Bottom [ ( l m )] Top
+BigStack::Top() -- Status = Completed, Value = 'm'
+BigStack::IsEmpty() -- Status = Not Empty
+BigStack::Size() -- Status = Completed, Size = 2
+BigStack::Pop() -- Status = Completed
+BigStack::Pop() -- Status = Failed
+BigStack::Print() -- Top [  ] Bottom [ ] Top
+BigStack::IsEmpty() -- Status = Empty
+BigStack::Size() -- Status = Completed, Size = 0
+BigStack::Pop() -- Status = Failed
+BigStack::Pop() -- Status = Failed
+BigStack::Pop() -- Status = Failed
+BigStack::Print() -- Top [  ] Bottom [ ] Top
+BigStack::IsEmpty() -- Status = Empty
+BigStack::Size() -- Status = Completed, Size = 0
+BigStack::Push('n') -- Status = Completed
+BigStack::Push('o') -- Status = Completed
+BigStack::Push('p') -- Status = Completed
+BigStack::Print() -- Top [ ( p o n ) ] Bottom [ ( n o p )] Top
+BigStack::IsEmpty() -- Status = Not Empty
+BigStack::Size() -- Status = Completed, Size = 3
+BigStack::~BigStack() -- Status = Completed
+
+############################################################

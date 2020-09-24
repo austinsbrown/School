@@ -1,0 +1,60 @@
+# p03input3.txt -- Test BigStack class member functions
+
+# Test MakeEmpty()
+c B
+s
++ a
++ b
++ c
++ d
++ e
++ f
++ g
++ h
++ i
++ j
++ k
+p
+s
+x
+p
+s
+d
+
+~
+
+# Test IsEmpty()
+c B
+s
+e
+-
+-
+p
+e
+s
++ l
++ m
+p
+t
+e
+s
+-
+-
+p
+e
+s
+-
+-
+-
+p
+e
+s
++ n
++ o 
++ p
+p
+e
+s
+d
+
+

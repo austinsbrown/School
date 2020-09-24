@@ -1,0 +1,118 @@
+# p01input1.txt -- Test of GetNextImage and Transpose Image 
+
+# Open named file
+[ smalldata.csv
+
+# Draw Bars
+b 1
+
+# Print histogram counters
+c
+
+# Draw Bars
+b 1
+
+# Read next line of image data
+n
+
+# Draw Bars
+b 1
+
+
+# Print image
+p
+
+# Draw Bars
+b 1
+
+# Print histogram counters
+c
+
+# Draw Bars
+b 1
+
+# Print Original Image
+p
+
+# Draw Bars
+b 1
+
+# Test Transpose Image
+t
+
+# Print Image
+p
+
+# Draw Bars
+b 1 
+
+# Test Transpose Image
+t
+
+# Print Image
+p
+
+# Draw Bars
+b 1
+
+
+# Read and print next line of image data
+n
+p
+b 1
+
+# Print histogram counters
+c
+
+# Draw Bars
+b 1
+
+# Read all remaining lines of image data
+a
+
+# Draw Bars
+b 1
+
+# Print histogram counters
+c
+
+# Draw Bars
+b 1
+
+# Close file
+]
+
+# Draw bars
+b 2
+
+# Open named file
+[ bigdata.csv
+
+# Draw Bars
+b 1
+
+# Print histogram counters
+c
+
+# Read all remaining lines of image data
+a
+
+# Draw Bars
+b 1
+
+# Print histogram counters
+c
+
+# Draw Bars
+b 1
+
+# Close file
+]
+
+# Draw bars
+b 2
+
+
+
+
+

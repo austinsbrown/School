@@ -1,0 +1,14 @@
+
+Enter the name of the input file: P12_in2.txt
+P12_in2.txt
+
+sin(degrees): sin(45) = 0.707107
+cos(degrees): cos(120) = -0.5
+tan(degrees): tan(-150) = 0.57735
+sin(radians): sin(2.61799) = 0.5
+cos(radians): cos(1.0472) = 0.5
+tan(radians): tan(-2.0944) = 1.73205
+Invalid Calculation Type: Name
+Invalid Operator for Trig Operations: a
+
+

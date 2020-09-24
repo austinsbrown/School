@@ -1,0 +1,11 @@
+
+Enter the name of the input file: P12_in5.txt
+P12_in5.txt
+
+*************** Empty Input File **************
+==> The input file is empty.
+==> There is no information to process.
+==> Terminating the program!!!
+***********************************************
+
+

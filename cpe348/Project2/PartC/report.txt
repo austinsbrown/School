@@ -1,0 +1,6 @@
+Final Values:
+0 was transmitted at slot 4. It times out at 204.8 microseconds 
+1 was transmitted at slot 8. It times out at 409.6 microseconds 
+2 was transmitted at slot 3. It times out at 153.6 microseconds 
+3 was transmitted at slot 10. It times out at 512 microseconds 
+4 was transmitted at slot 186. It times out at 9523.2 microseconds 

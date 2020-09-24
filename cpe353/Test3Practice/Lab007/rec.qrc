@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/icons8-bill-cipher-50.png</file>
+        <file>icons/icons8-empire-50.png</file>
+        <file>icons/icons8-iron-man-50.png</file>
+        <file>icons/play.png</file>
+        <file>icons/stop.png</file>
+        <file>icons/trash.png</file>
+    </qresource>
+</RCC>

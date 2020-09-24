@@ -1,0 +1,13 @@
+P12_in3.txt
+
+sin(degrees): sin(45.5) = 0.71325
+Invalid Operator for Trig Operations: +
+Invalid Calculation Type: Bird
+cos(degrees): cos(120) = -0.5
+Add: 4+6.25 = 10.25
+Invalid Calculation Type: Word
+Invalid Operator for Math Operations: (
+Sub: 5.55-7 = -1.45
+Mod: 9%5 = 4
+
+

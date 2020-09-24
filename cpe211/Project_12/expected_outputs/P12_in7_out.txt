@@ -1,0 +1,5 @@
+P12_in7.txt
+
+sin(degrees): sin(45) = 0.707107
+
+

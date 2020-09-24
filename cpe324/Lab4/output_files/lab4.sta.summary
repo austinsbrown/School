@@ -1,0 +1,185 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -6.107
+TNS   : -414.251
+
+Type  : Slow 1200mV 85C Model Setup 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : -4.132
+TNS   : -15.048
+
+Type  : Slow 1200mV 85C Model Setup 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : -2.351
+TNS   : -4.169
+
+Type  : Slow 1200mV 85C Model Setup 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : -0.497
+TNS   : -2.041
+
+Type  : Slow 1200mV 85C Model Setup 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : -0.239
+TNS   : -0.577
+
+Type  : Slow 1200mV 85C Model Hold 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : -0.586
+TNS   : -3.374
+
+Type  : Slow 1200mV 85C Model Hold 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : 0.264
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -172.620
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : -1.285
+TNS   : -71.960
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : -1.285
+TNS   : -11.565
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -5.497
+TNS   : -366.730
+
+Type  : Slow 1200mV 0C Model Setup 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : -3.828
+TNS   : -13.820
+
+Type  : Slow 1200mV 0C Model Setup 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : -2.014
+TNS   : -3.213
+
+Type  : Slow 1200mV 0C Model Setup 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : -0.355
+TNS   : -0.999
+
+Type  : Slow 1200mV 0C Model Setup 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : -0.120
+TNS   : -0.239
+
+Type  : Slow 1200mV 0C Model Hold 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : -0.386
+TNS   : -2.309
+
+Type  : Slow 1200mV 0C Model Hold 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -172.620
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : -1.285
+TNS   : -71.960
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : -1.285
+TNS   : -11.565
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.476
+TNS   : -140.463
+
+Type  : Fast 1200mV 0C Model Setup 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : -1.571
+TNS   : -5.483
+
+Type  : Fast 1200mV 0C Model Setup 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : -0.672
+TNS   : -0.672
+
+Type  : Fast 1200mV 0C Model Setup 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : 0.269
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : -0.244
+TNS   : -1.668
+
+Type  : Fast 1200mV 0C Model Hold 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : 0.198
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -143.413
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keypad_scanner:C0|debounce:C2|jk_ff:FF0|q'
+Slack : -1.000
+TNS   : -56.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keypad_scanner:C0|clock_gen:C0|count[11]'
+Slack : -1.000
+TNS   : -9.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keypad_scanner:C0|clock_gen:C0|scan_clk'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uarec:C6|rec_control_logic:C2|state[0]'
+Slack : 0.315
+TNS   : 0.000
+
+------------------------------------------------------------

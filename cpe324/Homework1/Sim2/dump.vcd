@@ -1,0 +1,116 @@
+$date
+	Sun Feb 23 13:29:43 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module struct_tb $end
+$var wire 1 ! OUT $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$var reg 1 $ clk $end
+$scope module uut $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 $ clk $end
+$var wire 1 % cout $end
+$var wire 1 & qt_bar $end
+$var wire 1 ' qt $end
+$var wire 1 ! OUT $end
+$scope module C1 $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 % C_OUT $end
+$var wire 1 ! SUM $end
+$var wire 1 ( w1 $end
+$var wire 1 ) w2 $end
+$var wire 1 * w3 $end
+$var wire 1 ' C_IN $end
+$upscope $end
+$scope module C2 $end
+$var wire 1 $ clk $end
+$var wire 1 % d $end
+$var wire 1 ' qt $end
+$var wire 1 & qt_bar $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0*
+x)
+x(
+z'
+z&
+z%
+0$
+0#
+0"
+0!
+$end
+#50
+1$
+#100
+1!
+x*
+0$
+1"
+#150
+1$
+#200
+0*
+0$
+1#
+0"
+#250
+1$
+#300
+0!
+x*
+0$
+1"
+#350
+1$
+#400
+1!
+0$
+0#
+#450
+1$
+#500
+0!
+0$
+1#
+#550
+1$
+#600
+0*
+0$
+0#
+0"
+#650
+1$
+#700
+1!
+x*
+0$
+1"
+#750
+1$
+#800
+0!
+0*
+0$
+0"
+#850
+1$
+#900
+0$
+#950
+1$
+#1000
+0$

@@ -1,0 +1,8 @@
+# p00input1.txt - Sample input file for testing PrintStars()
+
+# Testing PrintStars(...)
+* 4
+* 1
+* 0
+
+

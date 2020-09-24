@@ -1,0 +1,8 @@
+BBBBBB......AAAAAA....DDDDDD..
+BBBBBBBB...AAAAAAAA...DDDDDDD.
+BB....BB...AA....AA...DD....DD
+BBBBBBB....AA....AA...DD....DD
+BB....BB...AAAAAAAA...DD....DD
+BB....BB...AA....AA...DD....DD
+BBBBBBB....AA....AA...DDDDDDD.
+BBBBBB.....AA....AA...DDDDDD..

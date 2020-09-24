@@ -1,0 +1,84 @@
+# p01input2.txt -- Test of Horizontal/Vertical Flip
+
+# Open named file
+[ smalldata.csv
+
+# Draw Bars
+b 1
+
+# Read next line of image data
+n
+
+# Draw Bars
+b 1
+
+# Print image
+p
+
+# Draw Bars
+b 1
+
+# Test Horizontal Flip of Image
+h
+
+# Draw Bars
+b 1
+
+# Print Flipped Image
+p
+
+# Draw Bars
+b 1
+
+# Test Horizontal Flip of Image
+h
+
+# Draw Bars
+b 1
+
+# Print Flipped Image
+p
+
+# Draw Bars
+b 1
+
+# Test Vertical Flip of Image
+
+# Print Image
+p
+
+# Draw Bars
+b 1
+
+# Test Vertical Flip of Image
+v
+
+# Draw Bars
+b 1
+
+# Print Flipped Image
+p
+
+# Draw Bars
+b 1
+
+# Test Vertical Flip of Image
+v
+
+# Draw Bars
+b 1
+
+# Print Flipped Image
+p
+
+# Draw Bars
+b 1
+
+# Close file
+]
+
+# Draw bars
+b 2
+
+
+

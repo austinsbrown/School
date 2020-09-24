@@ -1,0 +1,31 @@
+0 is moved at slot 1
+1 is moved at slot 2
+2 is moved at slot 2
+3 is moved at slot 1
+4 is moved at slot 1
+5 is moved at slot 1
+0 is moved at slot 5
+3 is moved at slot 2
+4 is moved at slot 4
+5 is moved at slot 2
+1 is moved at slot 6
+2 is moved at slot 5
+3 is moved at slot 7
+5 is moved at slot 3
+5 succsessful at slot 3
+4 succsessful at slot 4
+0 is moved at slot 8
+2 is moved at slot 7
+1 succsessful at slot 6
+2 is moved at slot 11
+3 is moved at slot 17
+0 succsessful at slot 8
+2 succsessful at slot 11
+3 succsessful at slot 17
+Final Values:
+0 was transmitted at slot 8. It times out at 409.6
+1 was transmitted at slot 6. It times out at 307.2
+2 was transmitted at slot 11. It times out at 563.2
+3 was transmitted at slot 17. It times out at 870.4
+4 was transmitted at slot 4. It times out at 204.8
+5 was transmitted at slot 3. It times out at 153.6

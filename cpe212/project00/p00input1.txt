@@ -1,0 +1,10 @@
+# p00input1.txt - Sample input file for testing PrintText()
+
+# Testing PrintText(...)
+t Hello
+t World
+t Hello World
+
+
+
+

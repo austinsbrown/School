@@ -1,0 +1,9 @@
+P12_in4.txt
+
+*************** Empty Input File **************
+==> The input file is empty.
+==> There is no information to process.
+==> Terminating the program!!!
+***********************************************
+
+

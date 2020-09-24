@@ -1,0 +1,1198 @@
+TimeQuest Timing Analyzer report for Lab7_Part_a
+Thu Mar 12 08:26:04 2020
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk'
+ 22. Slow 1200mV 0C Model Hold: 'clk'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk'
+ 30. Fast 1200mV 0C Model Hold: 'clk'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Output Ports
+ 45. Unconstrained Output Ports
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                               ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
+; Timing Analyzer       ; TimeQuest                                               ;
+; Revision Name         ; Lab7_Part_a                                             ;
+; Device Family         ; Cyclone IV E                                            ;
+; Device Name           ; EP4CE115F29C7                                           ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.23        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;  12.0%      ;
+;     Processor 3            ;   9.2%      ;
+;     Processor 4            ;   1.9%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 53.26 MHz ; 53.26 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+---------+-------------------+
+; Clock ; Slack   ; End Point TNS     ;
++-------+---------+-------------------+
+; clk   ; -17.777 ; -1221.781         ;
++-------+---------+-------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.408 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -381.402                         ;
++-------+--------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                                             ;
++---------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                               ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -17.777 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.100     ; 18.675     ;
+; -17.622 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.100     ; 18.520     ;
+; -17.550 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.100     ; 18.448     ;
+; -17.523 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.054     ; 18.467     ;
+; -17.515 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.103     ; 18.410     ;
+; -17.510 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.107     ; 18.401     ;
+; -17.441 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.055     ; 18.384     ;
+; -17.439 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.122     ; 18.315     ;
+; -17.406 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.100     ; 18.304     ;
+; -17.387 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.100     ; 18.285     ;
+; -17.372 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.086     ; 18.284     ;
+; -17.368 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.054     ; 18.312     ;
+; -17.360 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.103     ; 18.255     ;
+; -17.355 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.107     ; 18.246     ;
+; -17.299 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.079     ; 18.218     ;
+; -17.298 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.100     ; 18.196     ;
+; -17.298 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.068     ; 18.228     ;
+; -17.296 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.054     ; 18.240     ;
+; -17.288 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.103     ; 18.183     ;
+; -17.287 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.061     ; 18.224     ;
+; -17.286 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.055     ; 18.229     ;
+; -17.284 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.122     ; 18.160     ;
+; -17.283 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.107     ; 18.174     ;
+; -17.283 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.072     ; 18.209     ;
+; -17.259 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.054     ; 18.203     ;
+; -17.250 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.100     ; 18.148     ;
+; -17.243 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.126     ; 18.115     ;
+; -17.214 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.055     ; 18.157     ;
+; -17.212 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.122     ; 18.088     ;
+; -17.206 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.126     ; 18.078     ;
+; -17.190 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a67~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.092     ; 18.096     ;
+; -17.169 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.109     ; 18.058     ;
+; -17.155 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a4~porta_address_reg0  ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.067     ; 18.086     ;
+; -17.152 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.054     ; 18.096     ;
+; -17.144 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.079     ; 18.063     ;
+; -17.144 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.103     ; 18.039     ;
+; -17.143 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.068     ; 18.073     ;
+; -17.139 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.107     ; 18.030     ;
+; -17.137 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a47~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.129     ; 18.006     ;
+; -17.133 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.054     ; 18.077     ;
+; -17.132 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-3]  ; clk          ; clk         ; 1.000        ; -0.100     ; 18.030     ;
+; -17.132 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.061     ; 18.069     ;
+; -17.128 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.072     ; 18.054     ;
+; -17.125 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.103     ; 18.020     ;
+; -17.120 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.107     ; 18.011     ;
+; -17.118 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.040     ; 18.076     ;
+; -17.110 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.089     ; 18.019     ;
+; -17.110 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a52~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.096     ; 18.012     ;
+; -17.105 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-7]  ; clk          ; clk         ; 1.000        ; -0.100     ; 18.003     ;
+; -17.105 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.093     ; 18.010     ;
+; -17.104 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.054     ; 18.048     ;
+; -17.092 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a92~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.084     ; 18.006     ;
+; -17.088 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.126     ; 17.960     ;
+; -17.079 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 1.000        ; -0.100     ; 17.977     ;
+; -17.072 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.079     ; 17.991     ;
+; -17.071 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a11~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.087     ; 17.982     ;
+; -17.071 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.068     ; 18.001     ;
+; -17.070 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.055     ; 18.013     ;
+; -17.068 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.122     ; 17.944     ;
+; -17.060 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.061     ; 17.997     ;
+; -17.056 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.072     ; 17.982     ;
+; -17.051 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.055     ; 17.994     ;
+; -17.051 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.126     ; 17.923     ;
+; -17.049 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.122     ; 17.925     ;
+; -17.044 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.054     ; 17.988     ;
+; -17.040 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a28~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.047     ; 17.991     ;
+; -17.037 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a36~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.050     ; 17.985     ;
+; -17.036 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.041     ; 17.993     ;
+; -17.036 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.103     ; 17.931     ;
+; -17.035 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a67~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.092     ; 17.941     ;
+; -17.034 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.108     ; 17.924     ;
+; -17.032 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.054     ; 17.976     ;
+; -17.031 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.107     ; 17.922     ;
+; -17.028 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-4]  ; clk          ; clk         ; 1.000        ; -0.100     ; 17.926     ;
+; -17.027 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a87~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.096     ; 17.929     ;
+; -17.016 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.126     ; 17.888     ;
+; -17.014 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.109     ; 17.903     ;
+; -17.000 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a4~porta_address_reg0  ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.067     ; 17.931     ;
+; -16.996 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.054     ; 17.940     ;
+; -16.988 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.103     ; 17.883     ;
+; -16.983 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.107     ; 17.874     ;
+; -16.982 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a86~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.105     ; 17.875     ;
+; -16.982 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a47~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.129     ; 17.851     ;
+; -16.979 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.126     ; 17.851     ;
+; -16.963 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a67~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.092     ; 17.869     ;
+; -16.962 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.055     ; 17.905     ;
+; -16.960 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.122     ; 17.836     ;
+; -16.955 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a52~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.096     ; 17.857     ;
+; -16.948 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a26~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.070     ; 17.876     ;
+; -16.942 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.109     ; 17.831     ;
+; -16.937 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a92~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.084     ; 17.851     ;
+; -16.928 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 17.847     ;
+; -16.928 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a4~porta_address_reg0  ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.067     ; 17.859     ;
+; -16.927 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.068     ; 17.857     ;
+; -16.925 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a55~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.124     ; 17.799     ;
+; -16.916 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.061     ; 17.853     ;
+; -16.916 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a11~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.087     ; 17.827     ;
+; -16.914 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.055     ; 17.857     ;
+; -16.912 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.072     ; 17.838     ;
+; -16.912 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.122     ; 17.788     ;
++---------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                              ;
++-------+----------------------+-------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node                                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+-------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.408 ; Wave_Out.index[18]   ; Wave_Out.index[18]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.674      ;
+; 0.466 ; Wave_Out.index[18]   ; Wave_Out.index[13]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.732      ;
+; 0.466 ; Wave_Out.index[18]   ; Wave_Out.index[12]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.732      ;
+; 0.467 ; Wave_Out.index[18]   ; Wave_Out.index[11]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.733      ;
+; 0.467 ; Wave_Out.index[18]   ; Wave_Out.index[10]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 0.733      ;
+; 0.639 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-11]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 0.921      ;
+; 0.639 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-9]                                                                       ; clk          ; clk         ; 0.000        ; 0.096      ; 0.921      ;
+; 0.640 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-13]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 0.922      ;
+; 0.642 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-18]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 0.924      ;
+; 0.642 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-15]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 0.924      ;
+; 0.642 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-7]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 0.923      ;
+; 0.642 ; Audio_Out.count[12]  ; Audio_Out.count[12]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.909      ;
+; 0.644 ; DtoA_convert.ge[3]   ; DtoA_convert.ge[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 0.925      ;
+; 0.645 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-12]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 0.927      ;
+; 0.645 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-8]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 0.926      ;
+; 0.645 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[-1]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 0.926      ;
+; 0.645 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[1]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 0.926      ;
+; 0.646 ; Audio_Out.count[3]   ; Audio_Out.count[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.913      ;
+; 0.646 ; Audio_Out.count[1]   ; Audio_Out.count[1]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.913      ;
+; 0.647 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-4]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 0.928      ;
+; 0.656 ; Audio_Out.count[5]   ; Audio_Out.count[5]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.923      ;
+; 0.657 ; Audio_Out.count[6]   ; Audio_Out.count[6]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.924      ;
+; 0.659 ; Audio_Out.count[11]  ; Audio_Out.count[11]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 0.926      ;
+; 0.668 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-14]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 0.950      ;
+; 0.679 ; Wave_Out.index[18]   ; Wave_Out.index[17]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 0.946      ;
+; 0.679 ; Wave_Out.index[18]   ; Wave_Out.index[9]                                                                         ; clk          ; clk         ; 0.000        ; 0.081      ; 0.946      ;
+; 0.787 ; DtoA_convert.ge[-6]  ; DtoA_convert.ge[-6]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.068      ;
+; 0.804 ; DtoA_convert.ge[-20] ; DtoA_convert.ge[-20]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.086      ;
+; 0.814 ; DtoA_convert.ge[-5]  ; DtoA_convert.ge[-5]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.095      ;
+; 0.957 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-10]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.239      ;
+; 0.958 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-12]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.240      ;
+; 0.959 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-14]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.241      ;
+; 0.959 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-6]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.240      ;
+; 0.962 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[0]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 1.243      ;
+; 0.962 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[2]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 1.243      ;
+; 0.964 ; Wave_Out.index[18]   ; Wave_Out.index[16]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.231      ;
+; 0.964 ; Wave_Out.index[18]   ; Wave_Out.index[15]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.231      ;
+; 0.964 ; Wave_Out.index[18]   ; Wave_Out.index[14]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.231      ;
+; 0.969 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-17]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.251      ;
+; 0.970 ; Audio_Out.count[2]   ; Audio_Out.count[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.237      ;
+; 0.972 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-8]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.239      ;
+; 0.972 ; Audio_Out.count[5]   ; Audio_Out.count[6]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.239      ;
+; 0.972 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-11]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.254      ;
+; 0.972 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-7]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.253      ;
+; 0.972 ; Audio_Out.count[0]   ; Audio_Out.count[1]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.239      ;
+; 0.973 ; Audio_Out.count[11]  ; Audio_Out.count[12]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.240      ;
+; 0.974 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-16]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.256      ;
+; 0.974 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-3]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.255      ;
+; 0.977 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-10]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.259      ;
+; 0.977 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-6]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.258      ;
+; 0.979 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-2]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.260      ;
+; 0.986 ; Audio_Out.count[10]  ; Audio_Out.count[11]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.253      ;
+; 0.990 ; Audio_Out.count[19]  ; Audio_Out.count[19]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.257      ;
+; 0.990 ; Audio_Out.count[16]  ; Audio_Out.count[16]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.257      ;
+; 0.991 ; Audio_Out.count[10]  ; Audio_Out.count[12]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.258      ;
+; 0.992 ; Audio_Out.index[12]  ; Audio_Out.index[12]                                                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.258      ;
+; 0.994 ; Audio_Out.count[15]  ; Audio_Out.count[15]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.261      ;
+; 0.995 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-13]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.277      ;
+; 0.999 ; Audio_Out.index[18]  ; Audio_Out.index[18]                                                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.265      ;
+; 0.999 ; Audio_Out.index[17]  ; Audio_Out.index[17]                                                                       ; clk          ; clk         ; 0.000        ; 0.080      ; 1.265      ;
+; 1.000 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-12]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.282      ;
+; 1.005 ; Audio_Out.count[10]  ; Audio_Out.count[10]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.272      ;
+; 1.012 ; Wave_Out.index[15]   ; Wave_Out.index[9]                                                                         ; clk          ; clk         ; 0.000        ; 0.080      ; 1.278      ;
+; 1.014 ; Wave_Out.index[15]   ; Wave_Out.index[17]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 1.280      ;
+; 1.014 ; Wave_Out.index[15]   ; Wave_Out.index[14]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 1.280      ;
+; 1.027 ; DtoA_convert.ge[-19] ; DtoA_convert.ge[-19]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.309      ;
+; 1.029 ; DtoA_convert.ge[2]   ; DtoA_convert.ge[2]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 1.310      ;
+; 1.064 ; DtoA_convert.ge[-17] ; DtoA_convert.ge[-17]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.346      ;
+; 1.075 ; Wave_Out.index[18]   ; Wave_Out.index[7]                                                                         ; clk          ; clk         ; 0.000        ; 0.086      ; 1.347      ;
+; 1.077 ; Wave_Out.index[18]   ; Wave_Out.index[8]                                                                         ; clk          ; clk         ; 0.000        ; 0.086      ; 1.349      ;
+; 1.078 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-9]                                                                       ; clk          ; clk         ; 0.000        ; 0.096      ; 1.360      ;
+; 1.079 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-11]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.361      ;
+; 1.080 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-5]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.361      ;
+; 1.080 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-13]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.362      ;
+; 1.081 ; Audio_Out.count[3]   ; Audio_Out.count[5]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.348      ;
+; 1.081 ; Audio_Out.count[1]   ; Audio_Out.count[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.348      ;
+; 1.083 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 1.364      ;
+; 1.083 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[1]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 1.364      ;
+; 1.084 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-10]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.366      ;
+; 1.085 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-4]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.366      ;
+; 1.085 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-12]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.367      ;
+; 1.086 ; Audio_Out.count[3]   ; Audio_Out.count[6]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.353      ;
+; 1.088 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[2]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 1.369      ;
+; 1.093 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-7]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.360      ;
+; 1.095 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-15]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.377      ;
+; 1.096 ; Wave_Out.index[15]   ; Wave_Out.index[15]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 1.362      ;
+; 1.096 ; Audio_Out.count[2]   ; Audio_Out.count[5]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.363      ;
+; 1.097 ; Wave_Out.index[15]   ; Wave_Out.index[16]                                                                        ; clk          ; clk         ; 0.000        ; 0.080      ; 1.363      ;
+; 1.098 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-8]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.365      ;
+; 1.098 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-6]                                                                       ; clk          ; clk         ; 0.000        ; 0.081      ; 1.365      ;
+; 1.098 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-9]                                                                       ; clk          ; clk         ; 0.000        ; 0.096      ; 1.380      ;
+; 1.098 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-5]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.379      ;
+; 1.098 ; Audio_Out.count[0]   ; Audio_Out.count[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.365      ;
+; 1.100 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-1]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.381      ;
+; 1.100 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-14]                                                                      ; clk          ; clk         ; 0.000        ; 0.096      ; 1.382      ;
+; 1.101 ; Audio_Out.count[2]   ; Audio_Out.count[6]                                                                        ; clk          ; clk         ; 0.000        ; 0.081      ; 1.368      ;
+; 1.103 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-4]                                                                       ; clk          ; clk         ; 0.000        ; 0.095      ; 1.384      ;
+; 1.105 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[0]                                                                        ; clk          ; clk         ; 0.000        ; 0.095      ; 1.386      ;
+; 1.106 ; Audio_Out.count[8]   ; Audio_Out.count[11]                                                                       ; clk          ; clk         ; 0.000        ; 0.076      ; 1.368      ;
+; 1.110 ; Wave_Out.index[4]    ; altsyncram:out_table_rtl_0|altsyncram_ph71:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.430      ; 1.762      ;
++-------+----------------------+-------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary               ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 58.02 MHz ; 58.02 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+---------+------------------+
+; Clock ; Slack   ; End Point TNS    ;
++-------+---------+------------------+
+; clk   ; -16.236 ; -1104.648        ;
++-------+---------+------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.366 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -377.046                        ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                                              ;
++---------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                                               ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -16.236 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.083     ; 17.152     ;
+; -16.099 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.083     ; 17.015     ;
+; -16.027 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.092     ; 16.934     ;
+; -15.987 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.083     ; 16.903     ;
+; -15.977 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.037     ; 16.939     ;
+; -15.941 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.087     ; 16.853     ;
+; -15.935 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.106     ; 16.828     ;
+; -15.918 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.038     ; 16.879     ;
+; -15.911 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.068     ; 16.842     ;
+; -15.890 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.092     ; 16.797     ;
+; -15.856 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.083     ; 16.772     ;
+; -15.840 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.037     ; 16.802     ;
+; -15.827 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.083     ; 16.743     ;
+; -15.804 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.087     ; 16.716     ;
+; -15.800 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.083     ; 16.716     ;
+; -15.798 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.106     ; 16.691     ;
+; -15.787 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.063     ; 16.723     ;
+; -15.781 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.038     ; 16.742     ;
+; -15.778 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.092     ; 16.685     ;
+; -15.778 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.056     ; 16.721     ;
+; -15.772 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.083     ; 16.688     ;
+; -15.764 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.112     ; 16.651     ;
+; -15.754 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.044     ; 16.709     ;
+; -15.730 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.057     ; 16.672     ;
+; -15.728 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.037     ; 16.690     ;
+; -15.728 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.037     ; 16.690     ;
+; -15.715 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.111     ; 16.603     ;
+; -15.702 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.077     ; 16.624     ;
+; -15.692 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.087     ; 16.604     ;
+; -15.686 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.106     ; 16.579     ;
+; -15.679 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a67~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.077     ; 16.601     ;
+; -15.669 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.038     ; 16.630     ;
+; -15.659 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a47~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.113     ; 16.545     ;
+; -15.652 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.022     ; 16.629     ;
+; -15.652 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.095     ; 16.556     ;
+; -15.650 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.063     ; 16.586     ;
+; -15.649 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-3]  ; clk          ; clk         ; 1.000        ; -0.083     ; 16.565     ;
+; -15.647 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.092     ; 16.554     ;
+; -15.641 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.056     ; 16.584     ;
+; -15.640 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-7]  ; clk          ; clk         ; 1.000        ; -0.083     ; 16.556     ;
+; -15.627 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.112     ; 16.514     ;
+; -15.618 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.092     ; 16.525     ;
+; -15.617 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.044     ; 16.572     ;
+; -15.616 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.072     ; 16.543     ;
+; -15.610 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.091     ; 16.518     ;
+; -15.597 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.037     ; 16.559     ;
+; -15.593 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.057     ; 16.535     ;
+; -15.593 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.023     ; 16.569     ;
+; -15.591 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.092     ; 16.498     ;
+; -15.591 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.037     ; 16.553     ;
+; -15.578 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.111     ; 16.466     ;
+; -15.568 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 1.000        ; -0.083     ; 16.484     ;
+; -15.568 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a4~porta_address_reg0  ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.051     ; 16.516     ;
+; -15.568 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.037     ; 16.530     ;
+; -15.563 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.092     ; 16.470     ;
+; -15.561 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.087     ; 16.473     ;
+; -15.560 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a11~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.073     ; 16.486     ;
+; -15.559 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a92~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.068     ; 16.490     ;
+; -15.555 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.106     ; 16.448     ;
+; -15.542 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a67~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.077     ; 16.464     ;
+; -15.541 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.037     ; 16.503     ;
+; -15.538 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a87~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.081     ; 16.456     ;
+; -15.538 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.063     ; 16.474     ;
+; -15.538 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.038     ; 16.499     ;
+; -15.532 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.087     ; 16.444     ;
+; -15.529 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.056     ; 16.472     ;
+; -15.526 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.106     ; 16.419     ;
+; -15.525 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a28~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.029     ; 16.495     ;
+; -15.522 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a47~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.113     ; 16.408     ;
+; -15.515 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.112     ; 16.402     ;
+; -15.515 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.095     ; 16.419     ;
+; -15.513 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.037     ; 16.475     ;
+; -15.509 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.038     ; 16.470     ;
+; -15.508 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-4]  ; clk          ; clk         ; 1.000        ; -0.083     ; 16.424     ;
+; -15.505 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.044     ; 16.460     ;
+; -15.505 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.087     ; 16.417     ;
+; -15.499 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.106     ; 16.392     ;
+; -15.498 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a52~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.084     ; 16.413     ;
+; -15.487 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a36~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.038     ; 16.448     ;
+; -15.482 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.038     ; 16.443     ;
+; -15.481 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.057     ; 16.423     ;
+; -15.479 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.037     ; 16.441     ;
+; -15.477 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.087     ; 16.389     ;
+; -15.471 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.106     ; 16.364     ;
+; -15.466 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.111     ; 16.354     ;
+; -15.462 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.048     ; 16.413     ;
+; -15.459 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a55~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.109     ; 16.349     ;
+; -15.454 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.038     ; 16.415     ;
+; -15.453 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.041     ; 16.411     ;
+; -15.443 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a31~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.090     ; 16.352     ;
+; -15.440 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-3]  ; clk          ; clk         ; 1.000        ; -0.092     ; 16.347     ;
+; -15.439 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.097     ; 16.341     ;
+; -15.431 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a4~porta_address_reg0  ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.051     ; 16.379     ;
+; -15.431 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-7]  ; clk          ; clk         ; 1.000        ; -0.092     ; 16.338     ;
+; -15.430 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a67~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.077     ; 16.352     ;
+; -15.430 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a26~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.060     ; 16.369     ;
+; -15.429 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.029     ; 16.399     ;
+; -15.423 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a11~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.073     ; 16.349     ;
+; -15.422 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a92~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.068     ; 16.353     ;
+; -15.411 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a86~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.089     ; 16.321     ;
++---------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                          ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.366 ; Wave_Out.index[18]   ; Wave_Out.index[18]   ; clk          ; clk         ; 0.000        ; 0.071      ; 0.608      ;
+; 0.422 ; Wave_Out.index[18]   ; Wave_Out.index[13]   ; clk          ; clk         ; 0.000        ; 0.071      ; 0.664      ;
+; 0.422 ; Wave_Out.index[18]   ; Wave_Out.index[12]   ; clk          ; clk         ; 0.000        ; 0.071      ; 0.664      ;
+; 0.423 ; Wave_Out.index[18]   ; Wave_Out.index[11]   ; clk          ; clk         ; 0.000        ; 0.071      ; 0.665      ;
+; 0.423 ; Wave_Out.index[18]   ; Wave_Out.index[10]   ; clk          ; clk         ; 0.000        ; 0.071      ; 0.665      ;
+; 0.584 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-11] ; clk          ; clk         ; 0.000        ; 0.086      ; 0.841      ;
+; 0.584 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-9]  ; clk          ; clk         ; 0.000        ; 0.086      ; 0.841      ;
+; 0.585 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-13] ; clk          ; clk         ; 0.000        ; 0.086      ; 0.842      ;
+; 0.586 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-18] ; clk          ; clk         ; 0.000        ; 0.086      ; 0.843      ;
+; 0.588 ; DtoA_convert.ge[3]   ; DtoA_convert.ge[3]   ; clk          ; clk         ; 0.000        ; 0.086      ; 0.845      ;
+; 0.588 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-7]  ; clk          ; clk         ; 0.000        ; 0.086      ; 0.845      ;
+; 0.588 ; Audio_Out.count[12]  ; Audio_Out.count[12]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.831      ;
+; 0.589 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-15] ; clk          ; clk         ; 0.000        ; 0.086      ; 0.846      ;
+; 0.589 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-8]  ; clk          ; clk         ; 0.000        ; 0.086      ; 0.846      ;
+; 0.590 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-12] ; clk          ; clk         ; 0.000        ; 0.086      ; 0.847      ;
+; 0.590 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 0.000        ; 0.086      ; 0.847      ;
+; 0.590 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[1]   ; clk          ; clk         ; 0.000        ; 0.086      ; 0.847      ;
+; 0.591 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-4]  ; clk          ; clk         ; 0.000        ; 0.086      ; 0.848      ;
+; 0.591 ; Audio_Out.count[3]   ; Audio_Out.count[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.834      ;
+; 0.591 ; Audio_Out.count[1]   ; Audio_Out.count[1]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.834      ;
+; 0.600 ; Audio_Out.count[5]   ; Audio_Out.count[5]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.843      ;
+; 0.602 ; Audio_Out.count[6]   ; Audio_Out.count[6]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.845      ;
+; 0.603 ; Audio_Out.count[11]  ; Audio_Out.count[11]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.846      ;
+; 0.609 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-14] ; clk          ; clk         ; 0.000        ; 0.086      ; 0.866      ;
+; 0.629 ; Wave_Out.index[18]   ; Wave_Out.index[17]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.872      ;
+; 0.629 ; Wave_Out.index[18]   ; Wave_Out.index[9]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.872      ;
+; 0.729 ; DtoA_convert.ge[-6]  ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 0.000        ; 0.086      ; 0.986      ;
+; 0.751 ; DtoA_convert.ge[-20] ; DtoA_convert.ge[-20] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.008      ;
+; 0.755 ; DtoA_convert.ge[-5]  ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.012      ;
+; 0.870 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-10] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.127      ;
+; 0.871 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-12] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.128      ;
+; 0.874 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-17] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.131      ;
+; 0.875 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.132      ;
+; 0.876 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-14] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.133      ;
+; 0.876 ; Audio_Out.count[2]   ; Audio_Out.count[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.119      ;
+; 0.877 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[0]   ; clk          ; clk         ; 0.000        ; 0.086      ; 1.134      ;
+; 0.877 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[2]   ; clk          ; clk         ; 0.000        ; 0.086      ; 1.134      ;
+; 0.877 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-7]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.134      ;
+; 0.878 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-11] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.135      ;
+; 0.878 ; Audio_Out.count[0]   ; Audio_Out.count[1]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.121      ;
+; 0.879 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-3]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.136      ;
+; 0.885 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-16] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.142      ;
+; 0.885 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.127      ;
+; 0.885 ; Audio_Out.count[5]   ; Audio_Out.count[6]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.128      ;
+; 0.888 ; Audio_Out.count[11]  ; Audio_Out.count[12]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.131      ;
+; 0.888 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.145      ;
+; 0.889 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-10] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.146      ;
+; 0.890 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.147      ;
+; 0.890 ; Audio_Out.count[10]  ; Audio_Out.count[11]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.133      ;
+; 0.891 ; Wave_Out.index[18]   ; Wave_Out.index[16]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.134      ;
+; 0.891 ; Wave_Out.index[18]   ; Wave_Out.index[15]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.134      ;
+; 0.891 ; Wave_Out.index[18]   ; Wave_Out.index[14]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.134      ;
+; 0.897 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-13] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.154      ;
+; 0.901 ; Audio_Out.count[10]  ; Audio_Out.count[12]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.144      ;
+; 0.908 ; Audio_Out.count[19]  ; Audio_Out.count[19]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.151      ;
+; 0.908 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-12] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.165      ;
+; 0.911 ; Audio_Out.index[12]  ; Audio_Out.index[12]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.154      ;
+; 0.911 ; Audio_Out.count[16]  ; Audio_Out.count[16]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.154      ;
+; 0.913 ; Audio_Out.count[15]  ; Audio_Out.count[15]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.156      ;
+; 0.914 ; Wave_Out.index[15]   ; Wave_Out.index[9]    ; clk          ; clk         ; 0.000        ; 0.071      ; 1.156      ;
+; 0.915 ; Audio_Out.index[18]  ; Audio_Out.index[18]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.158      ;
+; 0.916 ; Wave_Out.index[15]   ; Wave_Out.index[17]   ; clk          ; clk         ; 0.000        ; 0.071      ; 1.158      ;
+; 0.916 ; Wave_Out.index[15]   ; Wave_Out.index[14]   ; clk          ; clk         ; 0.000        ; 0.071      ; 1.158      ;
+; 0.917 ; Audio_Out.index[17]  ; Audio_Out.index[17]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.160      ;
+; 0.921 ; DtoA_convert.ge[-19] ; DtoA_convert.ge[-19] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.178      ;
+; 0.923 ; Audio_Out.count[10]  ; Audio_Out.count[10]  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.166      ;
+; 0.945 ; DtoA_convert.ge[2]   ; DtoA_convert.ge[2]   ; clk          ; clk         ; 0.000        ; 0.086      ; 1.202      ;
+; 0.957 ; DtoA_convert.ge[-17] ; DtoA_convert.ge[-17] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.214      ;
+; 0.969 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-9]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.226      ;
+; 0.970 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-11] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.227      ;
+; 0.974 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.231      ;
+; 0.975 ; Audio_Out.count[3]   ; Audio_Out.count[5]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.218      ;
+; 0.975 ; Audio_Out.count[1]   ; Audio_Out.count[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.218      ;
+; 0.975 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-13] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.232      ;
+; 0.976 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[3]   ; clk          ; clk         ; 0.000        ; 0.086      ; 1.233      ;
+; 0.976 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[1]   ; clk          ; clk         ; 0.000        ; 0.086      ; 1.233      ;
+; 0.981 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-10] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.238      ;
+; 0.984 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-15] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.241      ;
+; 0.984 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.226      ;
+; 0.984 ; Wave_Out.index[15]   ; Wave_Out.index[16]   ; clk          ; clk         ; 0.000        ; 0.071      ; 1.226      ;
+; 0.984 ; Wave_Out.index[15]   ; Wave_Out.index[15]   ; clk          ; clk         ; 0.000        ; 0.071      ; 1.226      ;
+; 0.985 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-4]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.242      ;
+; 0.986 ; Audio_Out.count[3]   ; Audio_Out.count[6]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.229      ;
+; 0.986 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-12] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.243      ;
+; 0.986 ; Audio_Out.count[2]   ; Audio_Out.count[5]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.229      ;
+; 0.987 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[2]   ; clk          ; clk         ; 0.000        ; 0.086      ; 1.244      ;
+; 0.987 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.244      ;
+; 0.988 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-9]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.245      ;
+; 0.988 ; Audio_Out.count[0]   ; Audio_Out.count[3]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.231      ;
+; 0.989 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.246      ;
+; 0.992 ; Wave_Out.index[18]   ; Wave_Out.index[7]    ; clk          ; clk         ; 0.000        ; 0.076      ; 1.239      ;
+; 0.994 ; Wave_Out.index[18]   ; Wave_Out.index[8]    ; clk          ; clk         ; 0.000        ; 0.076      ; 1.241      ;
+; 0.994 ; Audio_Out.count[8]   ; Audio_Out.count[11]  ; clk          ; clk         ; 0.000        ; 0.069      ; 1.234      ;
+; 0.995 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-14] ; clk          ; clk         ; 0.000        ; 0.086      ; 1.252      ;
+; 0.995 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.237      ;
+; 0.995 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 1.237      ;
+; 0.997 ; Audio_Out.count[2]   ; Audio_Out.count[6]   ; clk          ; clk         ; 0.000        ; 0.072      ; 1.240      ;
+; 0.998 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-4]  ; clk          ; clk         ; 0.000        ; 0.086      ; 1.255      ;
+; 1.000 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[0]   ; clk          ; clk         ; 0.000        ; 0.086      ; 1.257      ;
+; 1.005 ; Audio_Out.count[8]   ; Audio_Out.count[12]  ; clk          ; clk         ; 0.000        ; 0.069      ; 1.245      ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -8.165 ; -532.825          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.190 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -207.109                        ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                                             ;
++--------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                               ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -8.165 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.079     ; 9.073      ;
+; -8.117 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.079     ; 9.025      ;
+; -8.098 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.081     ; 9.004      ;
+; -8.088 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.079     ; 8.996      ;
+; -8.072 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.032     ; 9.027      ;
+; -8.050 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.081     ; 8.956      ;
+; -8.043 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.079     ; 8.951      ;
+; -8.042 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.950      ;
+; -8.024 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.032     ; 8.979      ;
+; -8.021 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.081     ; 8.927      ;
+; -8.003 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.085     ; 8.905      ;
+; -7.995 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.032     ; 8.950      ;
+; -7.976 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.081     ; 8.882      ;
+; -7.975 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.081     ; 8.881      ;
+; -7.955 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.085     ; 8.857      ;
+; -7.951 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.069     ; 8.869      ;
+; -7.950 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.032     ; 8.905      ;
+; -7.949 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.032     ; 8.904      ;
+; -7.941 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.090     ; 8.838      ;
+; -7.939 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.102     ; 8.824      ;
+; -7.938 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.039     ; 8.886      ;
+; -7.931 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.839      ;
+; -7.931 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.036     ; 8.882      ;
+; -7.926 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.085     ; 8.828      ;
+; -7.922 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.032     ; 8.877      ;
+; -7.917 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.052     ; 8.852      ;
+; -7.915 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.059     ; 8.843      ;
+; -7.893 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.090     ; 8.790      ;
+; -7.892 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.800      ;
+; -7.891 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.102     ; 8.776      ;
+; -7.890 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.039     ; 8.838      ;
+; -7.885 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a52~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.088     ; 8.784      ;
+; -7.884 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a4~porta_address_reg0  ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.046     ; 8.825      ;
+; -7.884 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.071     ; 8.800      ;
+; -7.883 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.036     ; 8.834      ;
+; -7.881 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.085     ; 8.783      ;
+; -7.880 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.085     ; 8.782      ;
+; -7.874 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.782      ;
+; -7.874 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.032     ; 8.829      ;
+; -7.873 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.109     ; 8.751      ;
+; -7.870 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.057     ; 8.800      ;
+; -7.869 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.052     ; 8.804      ;
+; -7.867 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.059     ; 8.795      ;
+; -7.864 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.090     ; 8.761      ;
+; -7.864 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.081     ; 8.770      ;
+; -7.863 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.108     ; 8.742      ;
+; -7.862 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.102     ; 8.747      ;
+; -7.861 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.039     ; 8.809      ;
+; -7.858 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.022     ; 8.823      ;
+; -7.856 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-4]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.764      ;
+; -7.856 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a67~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.071     ; 8.772      ;
+; -7.854 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.036     ; 8.805      ;
+; -7.848 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-3]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.756      ;
+; -7.845 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.032     ; 8.800      ;
+; -7.840 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.052     ; 8.775      ;
+; -7.838 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-1]  ; clk          ; clk         ; 1.000        ; -0.032     ; 8.793      ;
+; -7.838 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.059     ; 8.766      ;
+; -7.837 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a52~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.088     ; 8.736      ;
+; -7.836 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a4~porta_address_reg0  ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.046     ; 8.777      ;
+; -7.831 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a11~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.067     ; 8.751      ;
+; -7.829 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a86~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.083     ; 8.733      ;
+; -7.829 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a92~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.062     ; 8.754      ;
+; -7.825 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.109     ; 8.703      ;
+; -7.825 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.081     ; 8.731      ;
+; -7.824 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a47~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.109     ; 8.702      ;
+; -7.823 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a71~porta_address_reg0 ; DtoA_convert.ge[-7]  ; clk          ; clk         ; 1.000        ; -0.079     ; 8.731      ;
+; -7.822 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.057     ; 8.752      ;
+; -7.819 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.090     ; 8.716      ;
+; -7.818 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a50~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.090     ; 8.715      ;
+; -7.817 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.102     ; 8.702      ;
+; -7.816 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.039     ; 8.764      ;
+; -7.816 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a79~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.102     ; 8.701      ;
+; -7.816 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a36~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.044     ; 8.759      ;
+; -7.815 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a49~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.039     ; 8.763      ;
+; -7.815 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.108     ; 8.694      ;
+; -7.809 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.036     ; 8.760      ;
+; -7.808 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a67~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.071     ; 8.724      ;
+; -7.808 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a95~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.036     ; 8.759      ;
+; -7.808 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a52~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.088     ; 8.707      ;
+; -7.807 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a4~porta_address_reg0  ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.046     ; 8.748      ;
+; -7.807 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 1.000        ; -0.081     ; 8.713      ;
+; -7.803 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a28~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.024     ; 8.766      ;
+; -7.800 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.032     ; 8.755      ;
+; -7.799 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-5]  ; clk          ; clk         ; 1.000        ; -0.032     ; 8.754      ;
+; -7.799 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a17~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.032     ; 8.754      ;
+; -7.796 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a7~porta_address_reg0  ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.109     ; 8.674      ;
+; -7.795 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.052     ; 8.730      ;
+; -7.794 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a76~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.052     ; 8.729      ;
+; -7.793 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a90~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.057     ; 8.723      ;
+; -7.793 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[2]   ; clk          ; clk         ; 1.000        ; -0.059     ; 8.721      ;
+; -7.792 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a15~porta_address_reg0 ; DtoA_convert.ge[-2]  ; clk          ; clk         ; 1.000        ; -0.059     ; 8.720      ;
+; -7.789 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a39~porta_address_reg0 ; DtoA_convert.ge[-11] ; clk          ; clk         ; 1.000        ; -0.075     ; 8.701      ;
+; -7.789 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-4]  ; clk          ; clk         ; 1.000        ; -0.081     ; 8.695      ;
+; -7.788 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a87~porta_address_reg0 ; DtoA_convert.ge[3]   ; clk          ; clk         ; 1.000        ; -0.076     ; 8.699      ;
+; -7.786 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a63~porta_address_reg0 ; DtoA_convert.ge[1]   ; clk          ; clk         ; 1.000        ; -0.108     ; 8.665      ;
+; -7.783 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a11~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.067     ; 8.703      ;
+; -7.781 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a86~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.083     ; 8.685      ;
+; -7.781 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a92~porta_address_reg0 ; DtoA_convert.ge[0]   ; clk          ; clk         ; 1.000        ; -0.062     ; 8.706      ;
+; -7.781 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a44~porta_address_reg0 ; DtoA_convert.ge[-3]  ; clk          ; clk         ; 1.000        ; -0.081     ; 8.687      ;
+; -7.781 ; altsyncram:offset_rtl_0|altsyncram_fh81:auto_generated|ram_block1a60~porta_address_reg0 ; DtoA_convert.ge[-6]  ; clk          ; clk         ; 1.000        ; -0.032     ; 8.736      ;
++--------+-----------------------------------------------------------------------------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                               ;
++-------+----------------------+-------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node                                                                                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+-------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.190 ; Wave_Out.index[18]   ; Wave_Out.index[18]                                                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.314      ;
+; 0.217 ; Wave_Out.index[18]   ; Wave_Out.index[13]                                                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.341      ;
+; 0.217 ; Wave_Out.index[18]   ; Wave_Out.index[12]                                                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.341      ;
+; 0.219 ; Wave_Out.index[18]   ; Wave_Out.index[11]                                                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.343      ;
+; 0.219 ; Wave_Out.index[18]   ; Wave_Out.index[10]                                                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.343      ;
+; 0.291 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-11]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.424      ;
+; 0.291 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-9]                                                                       ; clk          ; clk         ; 0.000        ; 0.049      ; 0.424      ;
+; 0.292 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-18]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.425      ;
+; 0.292 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-13]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.425      ;
+; 0.293 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-15]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.426      ;
+; 0.293 ; Audio_Out.count[12]  ; Audio_Out.count[12]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.418      ;
+; 0.294 ; DtoA_convert.ge[3]   ; DtoA_convert.ge[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.047      ; 0.425      ;
+; 0.294 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-12]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.427      ;
+; 0.294 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-7]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.425      ;
+; 0.294 ; Audio_Out.count[1]   ; Audio_Out.count[1]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
+; 0.295 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-8]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.426      ;
+; 0.295 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[-1]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.426      ;
+; 0.295 ; Audio_Out.count[3]   ; Audio_Out.count[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.420      ;
+; 0.296 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-4]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.427      ;
+; 0.296 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[1]                                                                        ; clk          ; clk         ; 0.000        ; 0.047      ; 0.427      ;
+; 0.301 ; Audio_Out.count[11]  ; Audio_Out.count[11]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; Audio_Out.count[6]   ; Audio_Out.count[6]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; Audio_Out.count[5]   ; Audio_Out.count[5]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.426      ;
+; 0.306 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-14]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.439      ;
+; 0.311 ; Wave_Out.index[18]   ; Wave_Out.index[17]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.436      ;
+; 0.311 ; Wave_Out.index[18]   ; Wave_Out.index[9]                                                                         ; clk          ; clk         ; 0.000        ; 0.041      ; 0.436      ;
+; 0.353 ; DtoA_convert.ge[-6]  ; DtoA_convert.ge[-6]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.484      ;
+; 0.358 ; DtoA_convert.ge[-20] ; DtoA_convert.ge[-20]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.491      ;
+; 0.365 ; DtoA_convert.ge[-5]  ; DtoA_convert.ge[-5]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.496      ;
+; 0.440 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-10]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.573      ;
+; 0.441 ; Wave_Out.index[18]   ; Wave_Out.index[16]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.566      ;
+; 0.441 ; Wave_Out.index[18]   ; Wave_Out.index[15]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.566      ;
+; 0.441 ; Wave_Out.index[18]   ; Wave_Out.index[14]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.566      ;
+; 0.441 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-12]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.574      ;
+; 0.442 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-14]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.575      ;
+; 0.443 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-6]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.574      ;
+; 0.444 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[0]                                                                        ; clk          ; clk         ; 0.000        ; 0.047      ; 0.575      ;
+; 0.445 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[2]                                                                        ; clk          ; clk         ; 0.000        ; 0.047      ; 0.576      ;
+; 0.447 ; Audio_Out.count[19]  ; Audio_Out.count[19]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.572      ;
+; 0.447 ; Audio_Out.count[16]  ; Audio_Out.count[16]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.572      ;
+; 0.449 ; Audio_Out.count[15]  ; Audio_Out.count[15]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.574      ;
+; 0.449 ; Audio_Out.count[11]  ; Audio_Out.count[12]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.574      ;
+; 0.449 ; Audio_Out.count[5]   ; Audio_Out.count[6]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.574      ;
+; 0.450 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-17]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.583      ;
+; 0.450 ; Audio_Out.index[12]  ; Audio_Out.index[12]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.575      ;
+; 0.452 ; Audio_Out.index[18]  ; Audio_Out.index[18]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.577      ;
+; 0.452 ; Audio_Out.index[17]  ; Audio_Out.index[17]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.577      ;
+; 0.452 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-11]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.585      ;
+; 0.452 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-8]                                                                       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.573      ;
+; 0.453 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-16]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.586      ;
+; 0.453 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-7]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.584      ;
+; 0.453 ; Audio_Out.count[0]   ; Audio_Out.count[1]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.578      ;
+; 0.453 ; Audio_Out.count[2]   ; Audio_Out.count[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.578      ;
+; 0.454 ; DtoA_convert.ge[-19] ; DtoA_convert.ge[-19]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.587      ;
+; 0.454 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-3]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.585      ;
+; 0.455 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-10]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.588      ;
+; 0.456 ; Audio_Out.count[10]  ; Audio_Out.count[10]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.581      ;
+; 0.456 ; DtoA_convert.ge[-8]  ; DtoA_convert.ge[-6]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.587      ;
+; 0.457 ; DtoA_convert.ge[-4]  ; DtoA_convert.ge[-2]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.588      ;
+; 0.459 ; DtoA_convert.ge[2]   ; DtoA_convert.ge[2]                                                                        ; clk          ; clk         ; 0.000        ; 0.047      ; 0.590      ;
+; 0.461 ; Audio_Out.count[10]  ; Audio_Out.count[11]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.586      ;
+; 0.464 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-13]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.597      ;
+; 0.464 ; Audio_Out.count[10]  ; Audio_Out.count[12]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.589      ;
+; 0.467 ; DtoA_convert.ge[-14] ; DtoA_convert.ge[-12]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.600      ;
+; 0.469 ; DtoA_convert.ge[-17] ; DtoA_convert.ge[-17]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.602      ;
+; 0.480 ; Wave_Out.index[4]    ; altsyncram:out_table_rtl_0|altsyncram_ph71:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.224      ; 0.808      ;
+; 0.480 ; Wave_Out.index[15]   ; Wave_Out.index[9]                                                                         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.604      ;
+; 0.481 ; Wave_Out.index[15]   ; Wave_Out.index[14]                                                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.605      ;
+; 0.483 ; Wave_Out.index[15]   ; Wave_Out.index[17]                                                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.607      ;
+; 0.490 ; Wave_Out.index[18]   ; Wave_Out.index[7]                                                                         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.619      ;
+; 0.492 ; Wave_Out.index[18]   ; Wave_Out.index[8]                                                                         ; clk          ; clk         ; 0.000        ; 0.045      ; 0.621      ;
+; 0.503 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-9]                                                                       ; clk          ; clk         ; 0.000        ; 0.049      ; 0.636      ;
+; 0.504 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-11]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.637      ;
+; 0.505 ; Audio_Out.count[1]   ; Audio_Out.count[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.630      ;
+; 0.505 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-13]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.638      ;
+; 0.506 ; Audio_Out.count[3]   ; Audio_Out.count[5]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.631      ;
+; 0.506 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-5]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.637      ;
+; 0.507 ; Wave_Out.index[16]   ; Wave_Out.index[16]                                                                        ; clk          ; clk         ; 0.000        ; 0.040      ; 0.631      ;
+; 0.507 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[1]                                                                        ; clk          ; clk         ; 0.000        ; 0.047      ; 0.638      ;
+; 0.507 ; DtoA_convert.ge[-13] ; DtoA_convert.ge[-10]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.640      ;
+; 0.508 ; Audio_Out.index[11]  ; Audio_Out.index[11]                                                                       ; clk          ; clk         ; 0.000        ; 0.041      ; 0.633      ;
+; 0.508 ; DtoA_convert.ge[1]   ; DtoA_convert.ge[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.047      ; 0.639      ;
+; 0.508 ; DtoA_convert.ge[-15] ; DtoA_convert.ge[-12]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.641      ;
+; 0.509 ; DtoA_convert.ge[-7]  ; DtoA_convert.ge[-4]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.640      ;
+; 0.509 ; Audio_Out.count[3]   ; Audio_Out.count[6]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.634      ;
+; 0.510 ; DtoA_convert.ge[-1]  ; DtoA_convert.ge[2]                                                                        ; clk          ; clk         ; 0.000        ; 0.047      ; 0.641      ;
+; 0.510 ; DtoA_convert.ge[-20] ; DtoA_convert.ge[-19]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.643      ;
+; 0.511 ; DtoA_convert.ge[-6]  ; DtoA_convert.ge[-5]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.642      ;
+; 0.512 ; Wave_Out.index[4]    ; Wave_Out.index[4]                                                                         ; clk          ; clk         ; 0.000        ; 0.040      ; 0.636      ;
+; 0.513 ; DtoA_convert.ge[-20] ; DtoA_convert.ge[-18]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.646      ;
+; 0.514 ; DtoA_convert.ge[-5]  ; DtoA_convert.ge[-4]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.645      ;
+; 0.514 ; DtoA_convert.ge[-6]  ; DtoA_convert.ge[-4]                                                                       ; clk          ; clk         ; 0.000        ; 0.047      ; 0.645      ;
+; 0.515 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-7]                                                                       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.636      ;
+; 0.516 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-15]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.649      ;
+; 0.518 ; DtoA_convert.ge[-11] ; DtoA_convert.ge[-8]                                                                       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.639      ;
+; 0.518 ; DtoA_convert.ge[-9]  ; DtoA_convert.ge[-6]                                                                       ; clk          ; clk         ; 0.000        ; 0.037      ; 0.639      ;
+; 0.518 ; DtoA_convert.ge[-12] ; DtoA_convert.ge[-9]                                                                       ; clk          ; clk         ; 0.000        ; 0.049      ; 0.651      ;
+; 0.519 ; Wave_Out.index[3]    ; altsyncram:out_table_rtl_0|altsyncram_ph71:auto_generated|ram_block1a0~porta_address_reg0 ; clk          ; clk         ; 0.000        ; 0.224      ; 0.847      ;
+; 0.519 ; DtoA_convert.ge[-18] ; DtoA_convert.ge[-14]                                                                      ; clk          ; clk         ; 0.000        ; 0.049      ; 0.652      ;
+; 0.519 ; Audio_Out.count[0]   ; Audio_Out.count[3]                                                                        ; clk          ; clk         ; 0.000        ; 0.041      ; 0.644      ;
++-------+----------------------+-------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -17.777   ; 0.190 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -17.777   ; 0.190 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -1221.781 ; 0.0   ; 0.0      ; 0.0     ; -381.402            ;
+;  clk             ; -1221.781 ; 0.000 ; N/A      ; N/A     ; -381.402            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; d_bit         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; freq[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[2]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[4]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[5]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[6]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[7]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[8]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[9]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[10]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; freq[11]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; vol[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; vol[1]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; vol[2]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; vol[3]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; vol[4]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; vol[5]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; vol[6]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; vol[7]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; d_bit         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; d_bit         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; d_bit         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 988458   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 988458   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; d_bit       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; d_bit       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
+    Info: Processing started: Thu Mar 12 08:26:01 2020
+Info: Command: quartus_sta Lab7_Part_a -c Lab7_Part_a
+Info: qsta_default_script.tcl version: #1
+Warning (20013): Ignored 24 assignments for entity "lab7_a" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity lab7_a -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity lab7_a -section_id Top was ignored
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab7_Part_a.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -17.777
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -17.777           -1221.781 clk 
+Info (332146): Worst-case hold slack is 0.408
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.408               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -381.402 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -16.236
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -16.236           -1104.648 clk 
+Info (332146): Worst-case hold slack is 0.366
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.366               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -377.046 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -8.165
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -8.165            -532.825 clk 
+Info (332146): Worst-case hold slack is 0.190
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.190               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -207.109 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 712 megabytes
+    Info: Processing ended: Thu Mar 12 08:26:04 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,16 @@
+0 is moved 1
+1 is moved 2
+2 is moved 2
+3 is moved 1
+4 is moved 1
+5 is moved 1
+0 is moved 5
+3 is moved 2
+4 is moved 4
+5 is moved 2
+1 is moved 6
+2 is moved 5
+3 is moved 7
+5 is moved 3
+5 succsessful at slot 3
+It occures at time 153.6 microseconds

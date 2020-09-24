@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "d_bit",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "vol[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[4]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[5]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[6]",
+					"strict" : false
+				},
+				{
+					"name" : "vol[7]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[8]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[9]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[10]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[11]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[5]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[6]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[7]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "freq[4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

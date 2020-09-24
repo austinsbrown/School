@@ -1,0 +1,257 @@
+|Lab2Cad
+B_COUT <= four_bit_sub_add:inst2.B_COUT
+B_CIN => four_bit_sub_add:inst.B_CIN
+SUB_ADD => four_bit_sub_add:inst.SUB_ADD
+SUB_ADD => four_bit_sub_add:inst2.SUB_ADD
+A[0] => four_bit_sub_add:inst.A[0]
+A[1] => four_bit_sub_add:inst.A[1]
+A[2] => four_bit_sub_add:inst.A[2]
+A[3] => four_bit_sub_add:inst.A[3]
+A[4] => four_bit_sub_add:inst2.A[0]
+A[5] => four_bit_sub_add:inst2.A[1]
+A[6] => four_bit_sub_add:inst2.A[2]
+A[7] => four_bit_sub_add:inst2.A[3]
+B[0] => four_bit_sub_add:inst.B[0]
+B[1] => four_bit_sub_add:inst.B[1]
+B[2] => four_bit_sub_add:inst.B[2]
+B[3] => four_bit_sub_add:inst.B[3]
+B[4] => four_bit_sub_add:inst2.B[0]
+B[5] => four_bit_sub_add:inst2.B[1]
+B[6] => four_bit_sub_add:inst2.B[2]
+B[7] => four_bit_sub_add:inst2.B[3]
+D_S[0] <= four_bit_sub_add:inst.D_S[0]
+D_S[1] <= four_bit_sub_add:inst.D_S[1]
+D_S[2] <= four_bit_sub_add:inst.D_S[2]
+D_S[3] <= four_bit_sub_add:inst.D_S[3]
+D_S[4] <= four_bit_sub_add:inst2.D_S[0]
+D_S[5] <= four_bit_sub_add:inst2.D_S[1]
+D_S[6] <= four_bit_sub_add:inst2.D_S[2]
+D_S[7] <= four_bit_sub_add:inst2.D_S[3]
+
+
+|Lab2Cad|four_bit_sub_add:inst2
+B_COUT <= fullSubAdd:inst4.B_COUT
+A[0] => fullSubAdd:inst.X
+A[1] => fullSubAdd:inst2.X
+A[2] => fullSubAdd:inst3.X
+A[3] => fullSubAdd:inst4.X
+B[0] => fullSubAdd:inst.Y
+B[1] => fullSubAdd:inst2.Y
+B[2] => fullSubAdd:inst3.Y
+B[3] => fullSubAdd:inst4.Y
+B_CIN => fullSubAdd:inst.B_CIN
+SUB_ADD => fullSubAdd:inst.SUB_ADD
+SUB_ADD => fullSubAdd:inst2.SUB_ADD
+SUB_ADD => fullSubAdd:inst3.SUB_ADD
+SUB_ADD => fullSubAdd:inst4.SUB_ADD
+D_S[0] <= fullSubAdd:inst.DIF_SUM
+D_S[1] <= fullSubAdd:inst2.DIF_SUM
+D_S[2] <= fullSubAdd:inst3.DIF_SUM
+D_S[3] <= fullSubAdd:inst4.DIF_SUM
+
+
+|Lab2Cad|four_bit_sub_add:inst2|fullSubAdd:inst4
+B_COUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst5.IN0
+Y => inst4.IN0
+Y => inst.IN0
+B_CIN => inst5.IN1
+B_CIN => inst6.IN1
+B_CIN => inst.IN1
+X => mux2_1:inst3.I0
+X => inst2.IN0
+X => inst1.IN0
+SUB_ADD => mux2_1:inst3.SEL
+DIF_SUM <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2Cad|four_bit_sub_add:inst2|fullSubAdd:inst4|mux2_1:inst3
+O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+SEL => inst1.IN1
+SEL => inst5.IN0
+I0 => inst.IN0
+
+
+|Lab2Cad|four_bit_sub_add:inst2|fullSubAdd:inst3
+B_COUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst5.IN0
+Y => inst4.IN0
+Y => inst.IN0
+B_CIN => inst5.IN1
+B_CIN => inst6.IN1
+B_CIN => inst.IN1
+X => mux2_1:inst3.I0
+X => inst2.IN0
+X => inst1.IN0
+SUB_ADD => mux2_1:inst3.SEL
+DIF_SUM <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2Cad|four_bit_sub_add:inst2|fullSubAdd:inst3|mux2_1:inst3
+O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+SEL => inst1.IN1
+SEL => inst5.IN0
+I0 => inst.IN0
+
+
+|Lab2Cad|four_bit_sub_add:inst2|fullSubAdd:inst2
+B_COUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst5.IN0
+Y => inst4.IN0
+Y => inst.IN0
+B_CIN => inst5.IN1
+B_CIN => inst6.IN1
+B_CIN => inst.IN1
+X => mux2_1:inst3.I0
+X => inst2.IN0
+X => inst1.IN0
+SUB_ADD => mux2_1:inst3.SEL
+DIF_SUM <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2Cad|four_bit_sub_add:inst2|fullSubAdd:inst2|mux2_1:inst3
+O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+SEL => inst1.IN1
+SEL => inst5.IN0
+I0 => inst.IN0
+
+
+|Lab2Cad|four_bit_sub_add:inst2|fullSubAdd:inst
+B_COUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst5.IN0
+Y => inst4.IN0
+Y => inst.IN0
+B_CIN => inst5.IN1
+B_CIN => inst6.IN1
+B_CIN => inst.IN1
+X => mux2_1:inst3.I0
+X => inst2.IN0
+X => inst1.IN0
+SUB_ADD => mux2_1:inst3.SEL
+DIF_SUM <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2Cad|four_bit_sub_add:inst2|fullSubAdd:inst|mux2_1:inst3
+O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+SEL => inst1.IN1
+SEL => inst5.IN0
+I0 => inst.IN0
+
+
+|Lab2Cad|four_bit_sub_add:inst
+B_COUT <= fullSubAdd:inst4.B_COUT
+A[0] => fullSubAdd:inst.X
+A[1] => fullSubAdd:inst2.X
+A[2] => fullSubAdd:inst3.X
+A[3] => fullSubAdd:inst4.X
+B[0] => fullSubAdd:inst.Y
+B[1] => fullSubAdd:inst2.Y
+B[2] => fullSubAdd:inst3.Y
+B[3] => fullSubAdd:inst4.Y
+B_CIN => fullSubAdd:inst.B_CIN
+SUB_ADD => fullSubAdd:inst.SUB_ADD
+SUB_ADD => fullSubAdd:inst2.SUB_ADD
+SUB_ADD => fullSubAdd:inst3.SUB_ADD
+SUB_ADD => fullSubAdd:inst4.SUB_ADD
+D_S[0] <= fullSubAdd:inst.DIF_SUM
+D_S[1] <= fullSubAdd:inst2.DIF_SUM
+D_S[2] <= fullSubAdd:inst3.DIF_SUM
+D_S[3] <= fullSubAdd:inst4.DIF_SUM
+
+
+|Lab2Cad|four_bit_sub_add:inst|fullSubAdd:inst4
+B_COUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst5.IN0
+Y => inst4.IN0
+Y => inst.IN0
+B_CIN => inst5.IN1
+B_CIN => inst6.IN1
+B_CIN => inst.IN1
+X => mux2_1:inst3.I0
+X => inst2.IN0
+X => inst1.IN0
+SUB_ADD => mux2_1:inst3.SEL
+DIF_SUM <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2Cad|four_bit_sub_add:inst|fullSubAdd:inst4|mux2_1:inst3
+O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+SEL => inst1.IN1
+SEL => inst5.IN0
+I0 => inst.IN0
+
+
+|Lab2Cad|four_bit_sub_add:inst|fullSubAdd:inst3
+B_COUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst5.IN0
+Y => inst4.IN0
+Y => inst.IN0
+B_CIN => inst5.IN1
+B_CIN => inst6.IN1
+B_CIN => inst.IN1
+X => mux2_1:inst3.I0
+X => inst2.IN0
+X => inst1.IN0
+SUB_ADD => mux2_1:inst3.SEL
+DIF_SUM <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2Cad|four_bit_sub_add:inst|fullSubAdd:inst3|mux2_1:inst3
+O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+SEL => inst1.IN1
+SEL => inst5.IN0
+I0 => inst.IN0
+
+
+|Lab2Cad|four_bit_sub_add:inst|fullSubAdd:inst2
+B_COUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst5.IN0
+Y => inst4.IN0
+Y => inst.IN0
+B_CIN => inst5.IN1
+B_CIN => inst6.IN1
+B_CIN => inst.IN1
+X => mux2_1:inst3.I0
+X => inst2.IN0
+X => inst1.IN0
+SUB_ADD => mux2_1:inst3.SEL
+DIF_SUM <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2Cad|four_bit_sub_add:inst|fullSubAdd:inst2|mux2_1:inst3
+O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+SEL => inst1.IN1
+SEL => inst5.IN0
+I0 => inst.IN0
+
+
+|Lab2Cad|four_bit_sub_add:inst|fullSubAdd:inst
+B_COUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Y => inst5.IN0
+Y => inst4.IN0
+Y => inst.IN0
+B_CIN => inst5.IN1
+B_CIN => inst6.IN1
+B_CIN => inst.IN1
+X => mux2_1:inst3.I0
+X => inst2.IN0
+X => inst1.IN0
+SUB_ADD => mux2_1:inst3.SEL
+DIF_SUM <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab2Cad|four_bit_sub_add:inst|fullSubAdd:inst|mux2_1:inst3
+O <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+I1 => inst1.IN0
+SEL => inst1.IN1
+SEL => inst5.IN0
+I0 => inst.IN0
+
+

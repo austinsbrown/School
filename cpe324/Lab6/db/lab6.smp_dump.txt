@@ -1,0 +1,7 @@
+
+State Machine - |lab6|translate:TR1|video_mode
+Name video_mode.11 video_mode.10 video_mode.01 video_mode.00 
+video_mode.00 0 0 0 0 
+video_mode.01 0 0 1 1 
+video_mode.10 0 1 0 1 
+video_mode.11 1 0 0 1 
