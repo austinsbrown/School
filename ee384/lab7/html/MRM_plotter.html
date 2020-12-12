@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title>MRM_plotter</title>
+	<meta name="generator" content="LibreOffice 7.0.1.2 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<meta name="DC.date" content="2020-10-03"/>
+	<meta name="DC.source" content="MRM_plotter.m"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin-left: 0.79in; margin-right: 0.39in; margin-top: 0.39in; margin-bottom: 0.39in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		h2 { margin-top: 0.14in; margin-bottom: 0.08in; line-height: 100%; background: transparent; page-break-after: avoid }
+		h2.western { font-family: "Liberation Serif", serif; font-size: 18pt; font-weight: bold }
+		h2.cjk { font-family: "NSimSun"; font-size: 18pt; font-weight: bold }
+		h2.ctl { font-family: "Lucida Sans"; font-size: 18pt; font-weight: bold }
+		pre { line-height: 100%; background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "NSimSun", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+		a:visited { color: #800000; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr" style="border: none; padding: 0in"><h2 class="western">
+Contents</h2>
+<ul>
+	<li><p style="margin-bottom: 0in"><a href="#2">Query user for
+	logfile</a></p>
+	<li><p style="margin-bottom: 0in"><a href="#3">Separate raw,
+	bandpassed, and motion filtered data from scn structure</a></p>
+	<li><p style="margin-bottom: 0in"><a href="#4">Pull out the raw
+	scans (if saved)</a></p>
+	<li><p><a href="#5">Create the waterfall horizontal and vertical
+	axes</a></p>
+</ul>
+<pre class="western">% plotMrmRetLog.m
+% This script prompts the user for a MRM-RET logfile, reads, parses, and
+% produces a &quot;waterfall plot&quot; of the motion filtered scans and detection lists
+% in the logfile
+clear all; close all; clc %#ok&lt;*CLALL&gt;</pre><h2 class="western">
+<a name="2"></a>Query user for logfile</h2>
+<pre class="western">%dnm = '.'; fnm = 'MRM_002.csv';
+[fnm,dnm] = uigetfile('*.csv');
+fprintf('Reading logfile %s\n',fullfile(dnm,fnm));
+[cfg,req,scn,det] = readMrmRetLog(fullfile(dnm,fnm));
+Reading logfile C:\Users\austinsbrown\Dropbox\ee384\lab7\RetLog_002.csv</pre><h2 class="western">
+<a name="3"></a>Separate raw, bandpassed, and motion filtered data
+from scn structure</h2>
+<p>(only motion filtered is used)</p>
+<h2 class="western"><a name="4"></a>Pull out the raw scans (if saved)</h2>
+<pre class="western">rawscansI = find([scn.Nfilt] == 1);
+rawscansV = reshape([scn(rawscansI).scn],[],length(rawscansI))';
+% band-pass filtered scans
+bpfscansI = find([scn.Nfilt] == 2);
+bpfscansV = reshape([scn(bpfscansI).scn],[],length(bpfscansI))';
+% motion filtered scans
+mfscansI = find([scn.Nfilt] == 4);
+mfscansV = reshape([scn(mfscansI).scn],[],length(mfscansI))';</pre><h2 class="western">
+<a name="5"></a>Create the waterfall horizontal and vertical axes</h2>
+<pre class="western">Tbin = 32/(512*1.024);  % ns
+T0 = 0; % ns
+c = 0.29979;  % m/ns
+Rbin = c*(Tbin*(0:size(mfscansV,2)-1) - T0)/2;  % Range Bins in meters
+
+figure
+plot(Rbin, rawscansV)
+title('Raw Scan'), xlabel('Meters'), ylabel('Amplitude')
+
+figure
+plot(Rbin, bpfscansV)
+title('Bandpass Values'), xlabel('Meters'), ylabel('Amplitude')
+
+figure
+plot(Rbin, mfscansV)
+title('Motion Filtered Values'), xlabel('Meters'), ylabel('Amplitude')
+
+figure
+plot(Rbin, rawscansV, Rbin, bpfscansV, Rbin, mfscansV)
+title('All Values'), xlabel('Meters'), ylabel('Amplitude')</pre><p>
+<img src="MRM_plotter_01.png" name="Image1" align="bottom" hspace="5" vspace="5" width="560" height="420" border="0"/>
+
+<img src="MRM_plotter_02.png" name="Image2" align="bottom" hspace="5" vspace="5" width="560" height="420" border="0"/>
+
+<img src="MRM_plotter_03.png" name="Image3" align="bottom" hspace="5" vspace="5" width="560" height="420" border="0"/>
+
+<img src="MRM_plotter_04.png" name="Image4" align="bottom" hspace="5" vspace="5" width="560" height="420" border="0"/>
+
+</p>
+<p><br/>
+<a href="https://www.mathworks.com/products/matlab/">Published
+with MATLAB&reg; R2020a</a></p>
+</body>
+</html>

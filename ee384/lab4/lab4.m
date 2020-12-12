@@ -131,6 +131,10 @@ subplot(2,1,2)
 spectrum_plot(yf, fs)
 title('Frequency Domain'), xlabel('Frequency'), ylabel('Output')
 
+figure
+n = 512;
+freqz(b, a, n, fs);
+title('2 Response')
 %% 3
 fs = 500;
 t = 0:1/fs:1;

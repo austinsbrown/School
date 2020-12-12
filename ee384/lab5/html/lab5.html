@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title>lab5</title>
+	<meta name="generator" content="LibreOffice 7.0.1.2 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2020-09-27T13:39:06.406000000"/>
+	<meta name="DC.date" content="2020-09-27"/>
+	<meta name="DC.source" content="lab5.m"/>
+	<style type="text/css">
+		p { line-height: 100% }
+		h2 { line-height: 100% }
+		h2.cjk { font-family: "NSimSun" }
+		h2.ctl { font-family: "Lucida Sans" }
+		pre { line-height: 100% }
+		pre.cjk { font-family: "NSimSun", monospace }
+	</style>
+</head>
+<body lang="en-US" dir="ltr" style="border: none; padding: 0in"><h2 class="western">
+Contents</h2>
+<ul>
+	<li><p style="margin-bottom: 0in"><a href="#1">Problem 1</a></p>
+	<li><p style="margin-bottom: 0in"><a href="#2">Problem 2</a></p>
+	<li><p><a href="#3">Probelm 3</a></p>
+</ul>
+<h2 class="western"><a name="1"></a>Problem 1</h2>
+<pre class="western">A = imread('lena.bmp');
+
+figure
+imshow(A);
+title('Problem 1,Part A')
+
+% part b
+
+grayed = rgb2gray(A);
+
+figure
+imshow(grayed);
+title('Problem 1,Part B')
+
+% part c
+grayed = my_grayscale(A);
+
+figure
+imshow(grayed);
+title('Problem 1,Part C')
+imwrite(grayed, 'my_grayed.jpg');</pre><p>
+<img src="lab5_01.png" name="Image1" align="bottom" hspace="5" vspace="5" width="557" height="500" border="0"/>
+
+<img src="lab5_02.png" name="Image2" align="bottom" hspace="5" vspace="5" width="557" height="500" border="0"/>
+
+<img src="lab5_03.png" name="Image3" align="bottom" hspace="5" vspace="5" width="557" height="500" border="0"/>
+
+</p>
+<h2 class="western"><a name="2"></a>Problem 2</h2>
+<pre class="western">A = imread('lowcontrast.jpg');
+
+figure
+imshow(A);
+title('Problem 2,Part A')
+
+% Part B
+figure
+imhist(A)
+title('Problem 2 Part B')
+
+% Part C
+enhanced = histeq(A);
+
+figure
+imshow(enhanced);
+title('Problem 2,Part C')</pre><p>
+<img src="lab5_04.png" name="Image4" align="bottom" hspace="5" vspace="5" width="327" height="270" border="0"/>
+
+<img src="lab5_05.png" name="Image5" align="bottom" hspace="5" vspace="5" width="560" height="420" border="0"/>
+
+<img src="lab5_06.png" name="Image6" align="bottom" hspace="5" vspace="5" width="327" height="270" border="0"/>
+
+</p>
+<h2 class="western"><a name="3"></a>Probelm 3</h2>
+<pre class="western">I = imread('my_grayed.jpg');
+J = imnoise(I, 'salt &amp; pepper', .05);
+
+figure
+imshow(J);
+title('Problem 3, Part A')
+
+% part b
+K = medfilt2(J);
+
+figure
+imshowpair(J, K, 'montage')
+title('Problem 3, Part B')
+
+% part c
+M = medfilt2(J, [5 5]);
+
+figure
+imshowpair(J, M, 'montage')
+title('Problem 3, Part C')
+
+% making the window size larger makes the image blurier</pre><p>
+<img src="lab5_07.png" name="Image7" align="bottom" hspace="5" vspace="5" width="557" height="500" border="0"/>
+
+<img src="lab5_08.png" name="Image8" align="bottom" hspace="5" vspace="5" width="966" height="500" border="0"/>
+
+<img src="lab5_09.png" name="Image9" align="bottom" hspace="5" vspace="5" width="966" height="500" border="0"/>
+
+</p>
+<p><br/>
+<br/>
+
+</p>
+<pre class="western" style="page-break-before: always">function G = my_grayscale(a)
+    G = 0.3*a(:,:,1) + 0.6*a(:,:,2) + 0.1*a(:,:,3);
+end</pre><p>
+<br/>
+<a href="https://www.mathworks.com/products/matlab/">Published
+with MATLAB&reg; R2020a</a></p>
+</body>
+</html>
