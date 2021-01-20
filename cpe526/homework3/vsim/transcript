@@ -1,0 +1,123 @@
+# //  Questa Sim-64
+# //  Version 2020.1 linux_x86_64 Jan 28 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project homework2
+vsim work.barrel_shifter_tb
+# vsim work.barrel_shifter_tb 
+# Start time: 13:21:25 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.barrel_shifter_tb(barrel_test)#1
+wave -r /*
+# unknown or ambiguous subcommand "-r": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
+add wave -r /*
+run
+# Causality operation skipped due to absence of debug database file
+# End time: 13:24:06 on Mar 04,2021, Elapsed time: 0:02:41
+# Errors: 0, Warnings: 1
+# Closing project /home/student/asb0034/cpe526/homework2/homework2.mpf
+# reading /apps/MentorGraphics2020/questasim/linux_x86_64/../modelsim.ini
+# Loading project homework3Sim
+# Load canceled
+# Compile of clock_divider.vhd was successful.
+# Compile of clock_divider_tb.vhd was successful.
+# Compile of stop_light_logic.vhd was successful.
+# Compile of stop_light_logic_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.stop_light_logic_tb
+# vsim work.stop_light_logic_tb 
+# Start time: 13:24:44 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.stop_light_logic_tb(test)#1
+quit -sim
+# End time: 13:25:00 on Mar 04,2021, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 2
+vsim work.stop_light_logic_tb -novopt
+# vsim work.stop_light_logic_tb -novopt 
+# Start time: 13:25:15 on Mar 04,2021
+# ** Error (suppressible): (vsim-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Error loading design
+# End time: 13:25:16 on Mar 04,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vsim -novopt work.stop_light_logic_tb
+# vsim -novopt work.stop_light_logic_tb 
+# Start time: 13:25:31 on Mar 04,2021
+# ** Error (suppressible): (vsim-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Error loading design
+# End time: 13:25:31 on Mar 04,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+vsim -vopt work.stop_light_logic_tb
+# vsim -vopt work.stop_light_logic_tb 
+# Start time: 13:25:51 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.stop_light_logic_tb(test)#1
+quit -sim
+# End time: 13:26:08 on Mar 04,2021, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 1
+vsim -vopt work.stop_light_logic_tb -voptargs=+acc
+# vsim -vopt work.stop_light_logic_tb -voptargs="+acc" 
+# Start time: 13:26:38 on Mar 04,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.stop_light_logic_tb(test)#1
+# Loading work.stop_light_logic(behav)#1
+quit -sim
+# End time: 13:27:01 on Mar 04,2021, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 1
+# Load canceled
+vsim -vopt -voptargs=+acc work.stop_light_logic_tb
+# vsim -vopt -voptargs="+acc" work.stop_light_logic_tb 
+# Start time: 13:27:34 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.stop_light_logic_tb(test)#1
+# Loading work.stop_light_logic(behav)#1
+add wave -r /*
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 0 ns ###############
+#   Wakeup process: /stop_light_logic_tb/clock_control @ sub-iteration 0
+#     Source: /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd:0
+#   Wakeup process: /stop_light_logic_tb/clock_control @ sub-iteration 1
+#     Source: /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd:0
+#   Wakeup process: /stop_light_logic_tb/clock_control @ sub-iteration 2
+#     Source: /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd:0
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 10000000 reached at time 0 ns.
+######## Additional Loop Analysis Started ##########
+####################################################
+# Simulation time has advanced while attempting to find the loop.
+# This may mean that the simulation iteration limit is set too low.
+####################################################
+##############  Autofindloop Step ##################
+#   Active process: /stop_light_logic_tb/uut/state_process
+#     Source: /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd:32
+#   Active process: /stop_light_logic_tb/stimuli
+#     Source: /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd:0
+###################################################
+# End time: 13:42:32 on Mar 04,2021, Elapsed time: 0:14:58
+# Errors: 1, Warnings: 2

@@ -1,0 +1,903 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: arbiter.vhd
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        39        38         1    97.43%
+
+================================Branch Details================================
+
+Branch Coverage for file arbiter.vhd --
+
+------------------------------------IF Branch------------------------------------
+    16                                      1985     Count coming in to IF
+    16              1                         13         if (CURRENT_STATE = INIT) then
+    18              1                        390         elsif (CURRENT_STATE = REQ0) then
+    24              1                        114         elsif (CURRENT_STATE = GNT0) then
+    30              1                        386         elsif (CURRENT_STATE = REQ1) then
+    36              1                        148         elsif (CURRENT_STATE = GNT1) then
+    42              1                        383         elsif (CURRENT_STATE = REQ2) then
+    48              1                         94         elsif (CURRENT_STATE = GNT2) then
+    54              1                        379        elsif (CURRENT_STATE = REQ3) then
+    60              1                         78         elsif (CURRENT_STATE = GNT3) then
+    66              1                    ***0***         else
+Branch totals: 9 hits of 10 branches = 90.00%
+
+------------------------------------IF Branch------------------------------------
+    19                                       390     Count coming in to IF
+    19              1                         29           if (REQ(0) = '1') then
+    21              1                        361           else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    25                                       114     Count coming in to IF
+    25              1                         87           if (REQ(0) = '1') then
+    27              1                         27           else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    31                                       386     Count coming in to IF
+    31              1                         41           if (REQ(1) = '1') then
+    33              1                        345           else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    37                                       148     Count coming in to IF
+    37              1                        110           if (REQ(1) = '1') then
+    39              1                         38           else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    43                                       383     Count coming in to IF
+    43              1                         37           if (REQ(2) = '1') then
+    45              1                        346           else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    49                                        94     Count coming in to IF
+    49              1                         60           if (REQ(2) = '1') then
+    51              1                         34           else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    55                                       379     Count coming in to IF
+    55              1                         16           if (REQ(3) = '1') then
+    57              1                        363           else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    61                                        78     Count coming in to IF
+    61              1                         63           if (REQ(3) = '1') then
+    63              1                         15           else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    73                                      1685     Count coming in to IF
+    73              1                         24         if (RESET = '1') then
+    75              1                       1661         elsif (CLK'event and CLK = '1') then
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    82                                      1694     Count coming in to IF
+    82              1                         24         if (RESET = '1') then
+    84              1                       1670         elsif (CLK'event and CLK = '0') then
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    85                                      1670     Count coming in to CASE
+    86              1                         12             when INIT|REQ0|REQ1|REQ2|REQ3 => GRANT <= "0000";
+    86              2                        388     
+    86              3                        386     
+    86              4                        382     
+    86              5                        379     
+    87              1                         29             when GNT0 => GRANT <= "1000";
+    88              1                         41             when GNT1 => GRANT <= "0100";
+    89              1                         37             when GNT2 => GRANT <= "0010";
+    90              1                         16             when GNT3 => GRANT <= "0001";
+Branch totals: 9 hits of 9 branches = 100.00%
+
+
+FSM Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    FSM States                       9         9         0   100.00%
+    FSM Transitions                 21        19         2    90.47%
+
+================================FSM Details================================
+
+FSM Coverage for file arbiter.vhd --
+
+FSM_ID: CURRENT_STATE
+    Current State Object : CURRENT_STATE
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+  16                INIT                   0
+  18                REQ0                   1
+  24                GNT0                   2
+  30                REQ1                   3
+  36                GNT1                   4
+  42                REQ2                   5
+  48                GNT2                   6
+  54                REQ3                   7
+  60                GNT3                   8
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                    INIT                  24          
+                    REQ0                 388          
+                    GNT0                  29          
+                    REQ1                 386          
+                    GNT1                  41          
+                    REQ2                 382          
+                    GNT2                  37          
+                    REQ3                 379          
+                    GNT3                  16          
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+  17                   0                  12          INIT -> REQ0                  
+  20                   1                  29          REQ0 -> GNT0                  
+  22                   2                 359          REQ0 -> REQ1                  
+  28                   4                  27          GNT0 -> REQ1                  
+  74                   5                   2          GNT0 -> INIT                  
+  32                   6                  41          REQ1 -> GNT1                  
+  34                   7                 344          REQ1 -> REQ2                  
+  74                   8                   1          REQ1 -> INIT                  
+  40                   9                  38          GNT1 -> REQ2                  
+  74                  10                   3          GNT1 -> INIT                  
+  44                  11                  37          REQ2 -> GNT2                  
+  46                  12                 345          REQ2 -> REQ3                  
+  52                  14                  34          GNT2 -> REQ3                  
+  74                  15                   3          GNT2 -> INIT                  
+  56                  16                  16          REQ3 -> GNT3                  
+  58                  17                 361          REQ3 -> REQ0                  
+  74                  18                   2          REQ3 -> INIT                  
+  64                  19                  15          GNT3 -> REQ0                  
+  74                  20                   1          GNT3 -> INIT                  
+    Uncovered Transitions :
+    -----------------------
+Line            Trans_ID          Transition          
+----            --------          ----------          
+  74                   3          REQ0 -> INIT        
+  74                  13          REQ2 -> INIT        
+
+
+    Summary                       Bins      Hits    Misses  Coverage
+    -------                       ----      ----    ------  --------
+        FSM States                   9         9         0   100.00%
+        FSM Transitions             21        19         2    90.47%
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      27        26         1    96.29%
+
+================================Statement Details================================
+
+Statement Coverage for file arbiter.vhd --
+
+    1                                                library ieee;
+    2                                                use ieee.std_logic_1164.all;
+    3                                                
+    4                                                entity ARBITER is
+    5                                                  port(REQ : in   std_logic_vector(0 to 3);
+    6                                                       GRANT : out std_logic_vector(0 to 3);
+    7                                                       RESET, CLK : in std_logic);
+    8                                                end ARBITER;
+    9                                                
+    10                                               architecture BEHAV of ARBITER is
+    11                                                 type STATE_TYPE is (INIT, REQ0, GNT0, REQ1, GNT1, REQ2, GNT2, REQ3, GNT3);
+    12                                                 signal CURRENT_STATE, NEXT_STATE : STATE_TYPE;
+    13                                               begin
+    14              1                       1985       process(CURRENT_STATE, REQ)
+    15                                                 begin
+    16                                                   if (CURRENT_STATE = INIT) then
+    17              1                         13           NEXT_STATE <= REQ0;
+    18                                                   elsif (CURRENT_STATE = REQ0) then
+    19                                                     if (REQ(0) = '1') then
+    20              1                         29             NEXT_STATE <= GNT0;
+    21                                                     else
+    22              1                        361             NEXT_STATE <= REQ1;
+    23                                                     end if;
+    24                                                   elsif (CURRENT_STATE = GNT0) then
+    25                                                     if (REQ(0) = '1') then
+    26              1                         87             NEXT_STATE <= GNT0;
+    27                                                     else
+    28              1                         27             NEXT_STATE <= REQ1;
+    29                                                     end if;
+    30                                                   elsif (CURRENT_STATE = REQ1) then
+    31                                                     if (REQ(1) = '1') then
+    32              1                         41             NEXT_STATE <= GNT1;
+    33                                                     else
+    34              1                        345             NEXT_STATE <= REQ2;
+    35                                                     end if;
+    36                                                   elsif (CURRENT_STATE = GNT1) then
+    37                                                     if (REQ(1) = '1') then
+    38              1                        110             NEXT_STATE <= GNT1;
+    39                                                     else
+    40              1                         38             NEXT_STATE <= REQ2;
+    41                                                     end if;
+    42                                                   elsif (CURRENT_STATE = REQ2) then
+    43                                                     if (REQ(2) = '1') then
+    44              1                         37             NEXT_STATE <= GNT2;
+    45                                                     else
+    46              1                        346             NEXT_STATE <= REQ3;
+    47                                                     end if;
+    48                                                   elsif (CURRENT_STATE = GNT2) then
+    49                                                     if (REQ(2) = '1') then
+    50              1                         60             NEXT_STATE <= GNT2;
+    51                                                     else
+    52              1                         34             NEXT_STATE <= REQ3;
+    53                                                     end if;
+    54                                                  elsif (CURRENT_STATE = REQ3) then
+    55                                                     if (REQ(3) = '1') then
+    56              1                         16             NEXT_STATE <= GNT3;
+    57                                                     else
+    58              1                        363             NEXT_STATE <= REQ0;
+    59                                                     end if;
+    60                                                   elsif (CURRENT_STATE = GNT3) then
+    61                                                     if (REQ(3) = '1') then
+    62              1                         63             NEXT_STATE <= GNT3;
+    63                                                     else
+    64              1                         15             NEXT_STATE <= REQ0;
+    65                                                     end if;
+    66                                                   else
+    67              1                    ***0***           NEXT_STATE <= INIT;
+    68                                                   end if;
+    69                                                 end process;
+    70                                               
+    71                                                 process (RESET, CLK)
+    72                                                 begin
+    73                                                   if (RESET = '1') then
+    74              1                         24           CURRENT_STATE <= INIT;
+    75                                                   elsif (CLK'event and CLK = '1') then
+    76              1                       1661           CURRENT_STATE <= NEXT_STATE;
+    77                                                   end if;
+    78                                                 end process;
+    79                                               
+    80                                                 process (RESET, CLK)
+    81                                                 begin
+    82                                                   if (RESET = '1') then
+    83              1                         24           GRANT <= "0000";
+    84                                                   elsif (CLK'event and CLK = '0') then
+    85                                                     case CURRENT_STATE is
+    86              1                       1547             when INIT|REQ0|REQ1|REQ2|REQ3 => GRANT <= "0000";
+    87              1                         29             when GNT0 => GRANT <= "1000";
+    88              1                         41             when GNT1 => GRANT <= "0100";
+    89              1                         37             when GNT2 => GRANT <= "0010";
+    90              1                         16             when GNT3 => GRANT <= "0001";
+    91                                                     end case;
+    92                                                   end if;
+    93                                                 end process;
+    94                                               end BEHAV;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         38        37         1    97.36%
+
+================================Toggle Details================================
+
+Toggle Coverage for File arbiter.vhd --
+
+       Line                                   Node      1H->0L      0L->1H                          "Coverage"
+--------------------------------------------------------------------------------------------------------------
+          5                                 REQ(3)           1           1                              100.00 
+          5                                 REQ(2)           1           1                              100.00 
+          5                                 REQ(1)           1           1                              100.00 
+          5                                 REQ(0)           1           1                              100.00 
+          6                               GRANT(3)           1           1                              100.00 
+          6                               GRANT(2)           1           1                              100.00 
+          6                               GRANT(1)           1           1                              100.00 
+          6                               GRANT(0)           1           1                              100.00 
+          7                                  RESET           1           1                              100.00 
+          7                                    CLK           1           1                              100.00 
+         12                             NEXT_STATE               ENUM type       Value       Count 
+                                                                      INIT           0        0.00 
+                                                                      REQ0         388      100.00 
+                                                                      GNT0          29      100.00 
+                                                                      REQ1         388      100.00 
+                                                                      GNT1          41      100.00 
+                                                                      REQ2         383      100.00 
+                                                                      GNT2          37      100.00 
+                                                                      REQ3         380      100.00 
+                                                                      GNT3          16      100.00 
+         12                          CURRENT_STATE               ENUM type       Value       Count 
+                                                                      INIT           1      100.00 
+                                                                      REQ0          39      100.00 
+                                                                      GNT0           2      100.00 
+                                                                      REQ1          39      100.00 
+                                                                      GNT1           4      100.00 
+                                                                      REQ2          39      100.00 
+                                                                      GNT2           3      100.00 
+                                                                      REQ3          39      100.00 
+                                                                      GNT3           2      100.00 
+
+Total Node Count     =         28 
+Toggled Node Count   =         27 
+Untoggled Node Count =          1 
+
+Toggle Coverage      =      97.36% (37 of 38 bins)
+
+=================================================================================
+=== File: req_dev.vhd
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for file req_dev.vhd --
+
+------------------------------------IF Branch------------------------------------
+    20                                     40100     Count coming in to IF
+    20              1                        692         if (RESET = '1')then
+    23              1                      19680         elsif (CLK'event and CLK = '1') then
+                                           19728     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    24                                     19680     Count coming in to CASE
+    25              1                      12364             when IDLE => COUNT := 0; 
+    32              1                        232             when COUNT_LOAD => COUNT := REQ_TIME;
+    35              1                       7084             when COUNT_DOWN => COUNT := COUNT - 1;
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    26                                     12364     Count coming in to IF
+    26              1                        232                          if (GEN_REQ = '1') then
+    28              1                      12132                          else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    36                                      7084     Count coming in to IF
+    36              1                        214                                if (COUNT = 0) then 
+    38              1                       6870                                else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+FSM Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    FSM States                       3         3         0   100.00%
+    FSM Transitions                  4         3         1    75.00%
+
+================================FSM Details================================
+
+FSM Coverage for file req_dev.vhd --
+
+FSM_ID: STATE
+    Current State Object : STATE
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+  25                IDLE                   0
+  32          COUNT_LOAD                   1
+  35          COUNT_DOWN                   2
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                    IDLE               13008          
+              COUNT_LOAD                 232          
+              COUNT_DOWN                7084          
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+  27                   0                 232          IDLE -> COUNT_LOAD            
+  33                   1                 232          COUNT_LOAD -> COUNT_DOWN          
+  37                   3                 232          COUNT_DOWN -> IDLE            
+    Uncovered Transitions :
+    -----------------------
+Line            Trans_ID          Transition          
+----            --------          ----------          
+  21                   2          COUNT_LOAD -> IDLE  
+
+
+    Summary                       Bins      Hits    Misses  Coverage
+    -------                       ----      ----    ------  --------
+        FSM States                   3         3         0   100.00%
+        FSM Transitions              4         3         1    75.00%
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      15        15         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for file req_dev.vhd --
+
+    1                                                library ieee;
+    2                                                use ieee.std_logic_1164.all;
+    3                                                
+    4                                                entity REQ_DEV is
+    5                                                  port(GEN_REQ : in std_logic;
+    6                                                       REQ_TIME : in integer range 0 to 100;
+    7                                                       REQUEST : out std_logic;
+    8                                                       GRANT : in std_logic;
+    9                                                       RESET, CLK : in std_logic);
+    10                                               end REQ_DEV;
+    11                                               
+    12                                               architecture BEHAV of REQ_DEV is
+    13                                                 type STATE_TYPE is (IDLE, COUNT_LOAD, COUNT_DOWN);
+    14                                                 signal STATE : STATE_TYPE;
+    15                                                 signal DEBUG : integer range 0 to 100;
+    16                                               begin
+    17              1                      40100       cntdwn : process(RESET, CLK)
+    18                                                   variable COUNT : integer range 0 to 100;
+    19                                                 begin
+    20                                                   if (RESET = '1')then
+    21              1                        692           STATE <= IDLE;
+    22              1                        692           REQUEST <= '0';
+    23                                                   elsif (CLK'event and CLK = '1') then
+    24                                                     case STATE is
+    25              1                      12364             when IDLE => COUNT := 0; 
+    26                                                                    if (GEN_REQ = '1') then
+    27              1                        232                            STATE <= COUNT_LOAD;
+    28                                                                    else
+    29              1                      12132                            STATE <= IDLE;
+    30                                                                    end if;
+    31              1                      12364                          REQUEST <= '0';
+    32              1                        232             when COUNT_LOAD => COUNT := REQ_TIME;
+    33              1                        232                                 STATE <= COUNT_DOWN;
+    34              1                        232                                 REQUEST <= '1';
+    35              1                       7084             when COUNT_DOWN => COUNT := COUNT - 1;
+    36                                                                          if (COUNT = 0) then 
+    37              1                        214                                  STATE <= IDLE;
+    38                                                                          else
+    39              1                       6870                                  STATE <= COUNT_DOWN;
+    40                                                                          end if;
+    41              1                       7084                                REQUEST <= '1';
+    42                                                     end case;
+    43                                                   end if;
+    44              1                      40100         DEBUG <= COUNT;
+    45                                                 end process cntdwn;
+    46                                               end BEHAV;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         15        15         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for File req_dev.vhd --
+
+       Line                                   Node      1H->0L      0L->1H                          "Coverage"
+--------------------------------------------------------------------------------------------------------------
+          5                                GEN_REQ           4           4                              100.00 
+          6                               REQ_TIME            INTEGER type          53      values         yes
+          7                                REQUEST           4           4                              100.00 
+          8                                  GRANT           4           4                              100.00 
+          9                                  RESET           4           4                              100.00 
+          9                                    CLK           4           4                              100.00 
+         14                                  STATE               ENUM type       Value       Count 
+                                                                      IDLE           4      100.00 
+                                                                COUNT_LOAD           4      100.00 
+                                                                COUNT_DOWN           4      100.00 
+         15                                  DEBUG            INTEGER type          97      values         yes
+
+Total Node Count     =         10 
+Toggled Node Count   =         10 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (15 of 15 bins)
+
+=================================================================================
+=== File: reset.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       9         9         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for file reset.sv --
+
+    1                                                import mine::*;
+    2                                                module reset_test(req_if.TEST reqif);
+    3                                                    int seed = 300;
+    4                                                    Packet p;
+    5                                                
+    6                                                    initial begin
+    7               1                         11             repeat(200)
+    8                                                        begin
+    9               1                         12                 p = new();
+    10              1                         12                 p.randomize();
+    11                                                           //reqif.cb.RESET <= 1'b0; // make reset low by default
+    12                                                           
+    13              1                       4920                 repeat (p.rst_low) @(reqif.cb);      // delay until reset
+    13              2                       4920     
+    14              1                         12                 reqif.cb.RESET <= 1'b1;              // reset goes high
+    15              1                         80                 repeat (p.rst_high) @(reqif.cb);     // length of reset
+    15              2                         81     
+    16              1                         11                 reqif.cb.RESET <= 1'b0;
+    17                                                       end
+    18                                                   end
+    19                                               endmodule : reset_test
+
+
+=================================================================================
+=== File: testbench.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      54        50         4    92.59%
+
+================================Statement Details================================
+
+Statement Coverage for file testbench.sv --
+
+    1                                                import mine::*;
+    2                                                module test0(req_if.TEST reqif);
+    3                                                  int seed = 300;
+    4                                                  Packet p;
+    5                                                
+    6                                                  initial begin
+    7               1                         24         repeat(200)
+    8                                                    begin
+    9               1                         25             p = new();
+    10              1                         25             p.randomize();
+    11                                               
+    12              1                         25     	    reqif.cb.GEN_REQ[0] <= 1'b0;
+    13              1                       4900             repeat (p.req_low) @(reqif.cb); // wait a random number of cycles
+    13              2                       4901     
+    14              1                         24             reqif.cb.REQ_TIME0 <= p.req_high; // how long that the request is high
+    15              1                         24             @(reqif.cb);
+    16              1                         24             reqif.cb.GEN_REQ[0] <= 1'b1; // go to fill state
+    17              1                         24             @(posedge reqif.cb.REQUEST);
+    18              1                         24                 reqif.cb.GEN_REQ[0] <= 1'b0;  // set Gen_REQ to low
+    19                                                   end
+    20              1                    ***0***         $stop;
+    21                                                 end
+    22                                               endmodule : test0	
+    23                                               
+    24                                               module test1(req_if.TEST reqif);
+    25                                                   int seed = 300;
+    26                                                   Packet p;
+    27                                               
+    28                                                   initial begin
+    29              1                         15             repeat(200)
+    30                                                       begin
+    31              1                         16                 p = new();
+    32              1                         16                 p.randomize();
+    33              1                         16     	        p.randomize();
+    34                                               
+    35              1                         16     	        reqif.cb.GEN_REQ[1] <= 1'b0;
+    36              1                       3251                 repeat (p.req_low) @(reqif.cb);     
+    36              2                       3251     
+    37              1                         16                 reqif.cb.REQ_TIME1 <= p.req_high;     
+    38              1                         16                 @(reqif.cb);
+    39              1                         16                 reqif.cb.GEN_REQ[1] <= 1'b1;           
+    40              1                         16                 @(posedge reqif.cb.REQUEST);
+    41              1                         15                 reqif.cb.GEN_REQ[1] <= 1'b0;
+    42                                                       end
+    43              1                    ***0***             $stop;
+    44                                                   end
+    45                                               endmodule : test1
+    46                                               
+    47                                               module test2(req_if.TEST reqif);
+    48                                                   int seed = 300;
+    49                                                   Packet p;
+    50                                               
+    51                                                   initial begin
+    52              1                         15             repeat(200)
+    53                                                       begin
+    54              1                         16                 p = new();
+    55              1                         16                 p.randomize();
+    56              1                         16                 p.randomize();
+    57              1                         16                 p.randomize();
+    58                                               
+    59              1                         16     	        reqif.cb.GEN_REQ[2] <= 1'b0;
+    60              1                       3122                 repeat (p.req_low) @(reqif.cb);      // wait for random # of cycles
+    60              2                       3122     
+    61              1                         16     	        reqif.cb.REQ_TIME2 <= p.req_high;     // length that request is high
+    62              1                         16     	        @(reqif.cb);
+    63              1                         16     	        reqif.cb.GEN_REQ[2] <= 1'b1;            // assert start - go to fill state
+    64              1                         16     	        @(posedge reqif.cb.REQUEST);
+    65              1                         15                 reqif.cb.GEN_REQ[2] <= 1'b0;
+    66                                                     
+    67                                                       end
+    68              1                    ***0***             $stop;
+    69                                                   end
+    70                                               endmodule : test2
+    71                                               
+    72                                               module test3(req_if.TEST reqif);
+    73                                                   int seed = 300;
+    74                                                   Packet p;
+    75                                               
+    76                                                   initial begin
+    77              1                         15             repeat(200)
+    78                                                       begin
+    79              1                         16                 p = new();
+    80              1                         16                 p.randomize();
+    81              1                         16                 p.randomize();
+    82              1                         16                 p.randomize();
+    83              1                         16                 p.randomize();
+    84                                               
+    85              1                         16     	        reqif.cb.GEN_REQ[3] <= 1'b0;
+    86              1                       3189                 repeat (p.req_low) @(reqif.cb);      
+    86              2                       3190     
+    87              1                         15                 reqif.cb.REQ_TIME3 <= p.req_high;    
+    88              1                         15                 @(reqif.cb);
+    89              1                         15                 reqif.cb.GEN_REQ[3] <= 1'b1;           
+    90              1                         15                 @(posedge reqif.cb.REQUEST);
+    91              1                         15                 reqif.cb.GEN_REQ[3] <= 1'b0;
+    92                                                    
+    93                                                       end
+    94              1                    ***0***             $stop;
+    95                                                   end
+    96                                               endmodule : test3
+
+
+=================================================================================
+=== File: top.sv
+=================================================================================
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       4         4         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for file top.sv --
+
+    1                                                interface req_if(input bit clk); // create interface for ease of use
+    2                                                    int REQ_TIME0, REQ_TIME1, REQ_TIME2, REQ_TIME3;
+    3                                                    logic [3:0] GEN_REQ, REQUEST, GRANT;
+    4                                                    logic RESET;
+    5                                                	
+    6               1                          1     	clocking cb @(posedge clk); // these inputs and outputs are clocked
+    7               1                          1             input REQUEST;
+    8                                                        output GEN_REQ, RESET; 
+    9                                                        output REQ_TIME0, REQ_TIME1, REQ_TIME2, REQ_TIME3;
+    10                                               	endclocking
+    11                                               
+    12                                               	modport TEST (clocking cb);
+    13                                               endinterface
+    14                                               
+    15                                               module top;
+    16                                                   bit clk;
+    17              1                      10001         always #5 clk = ~clk;
+    17              2                      10000     
+    18                                               
+    19                                               	req_if reqif(clk);
+    20                                               
+    21                                                   arbiter A // instantiation for arbiter
+    22                                                   (
+    23                                                       .CLK(clk),
+    24                                                       .REQ(reqif.REQUEST),
+    25                                                       .GRANT(reqif.GRANT),
+    26                                                       .RESET(reqif.RESET)
+    27                                                   );
+    28                                               
+    29                                                   // instantiate all of the tests
+    30                                                   REQ_DEV dut0
+    31                                                   (
+    32                                                       .CLK      (clk),
+    33                                                       .GEN_REQ (reqif.GEN_REQ[0]),
+    34                                                       .REQ_TIME (reqif.REQ_TIME0),
+    35                                                       .REQUEST  (reqif.REQUEST[0]),
+    36                                                       .GRANT    (reqif.GRANT[0]),
+    37                                                       .RESET    (reqif.RESET)
+    38                                                   );
+    39                                               
+    40                                                   REQ_DEV dut1
+    41                                                   (
+    42                                                       .GEN_REQ (reqif.GEN_REQ[1]),
+    43                                                       .REQ_TIME (reqif.REQ_TIME1),
+    44                                                       .REQUEST  (reqif.REQUEST[1]),
+    45                                                       .GRANT    (reqif.GRANT[1]),
+    46                                                       .RESET    (reqif.RESET),
+    47                                                       .CLK      (clk)
+    48                                                   );
+    49                                               
+    50                                                   REQ_DEV dut2
+    51                                                   (
+    52                                                       .GEN_REQ (reqif.GEN_REQ[2]),
+    53                                                       .REQ_TIME (reqif.REQ_TIME2),
+    54                                                       .REQUEST  (reqif.REQUEST[2]),
+    55                                                       .GRANT    (reqif.GRANT[2]),
+    56                                                       .RESET    (reqif.RESET),
+    57                                                       .CLK      (clk)
+    58                                                   );
+    59                                               
+    60                                                   REQ_DEV dut3
+    61                                                   (
+    62                                                       .GEN_REQ (reqif.GEN_REQ[3]),
+    63                                                       .REQ_TIME (reqif.REQ_TIME3),
+    64                                                       .REQUEST  (reqif.REQUEST[3]),
+    65                                                       .GRANT    (reqif.GRANT[3]),
+    66                                                       .RESET    (reqif.RESET),
+    67                                                       .CLK      (clk)
+    68                                                   );
+    69                                               
+    70                                               
+    71                                                   test0 t0(reqif); 
+    72                                                   test1 t1(reqif);
+    73                                                   test2 t2(reqif);
+    74                                                   test3 t3(reqif);
+    75                                               
+    76                                                   reset_test resetTest(reqif); // generate resets at random
+    77                                               
+    78                                               
+    79                                               endmodule : top
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        286        86       200    30.06%
+
+================================Toggle Details================================
+
+Toggle Coverage for File top.sv --
+
+       Line                                   Node      1H->0L      0L->1H                          "Coverage"
+--------------------------------------------------------------------------------------------------------------
+          1                                    clk           1           1                              100.00 
+          2                           REQ_TIME3[9]           0           0                                0.00 
+          2                           REQ_TIME3[8]           0           0                                0.00 
+          2                           REQ_TIME3[7]           0           0                                0.00 
+          2                           REQ_TIME3[6]           1           1                              100.00 
+          2                           REQ_TIME3[5]           1           1                              100.00 
+          2                           REQ_TIME3[4]           1           1                              100.00 
+          2                           REQ_TIME3[3]           1           1                              100.00 
+          2                          REQ_TIME3[31]           0           0                                0.00 
+          2                          REQ_TIME3[30]           0           0                                0.00 
+          2                           REQ_TIME3[2]           1           1                              100.00 
+          2                          REQ_TIME3[29]           0           0                                0.00 
+          2                          REQ_TIME3[28]           0           0                                0.00 
+          2                          REQ_TIME3[27]           0           0                                0.00 
+          2                          REQ_TIME3[26]           0           0                                0.00 
+          2                          REQ_TIME3[25]           0           0                                0.00 
+          2                          REQ_TIME3[24]           0           0                                0.00 
+          2                          REQ_TIME3[23]           0           0                                0.00 
+          2                          REQ_TIME3[22]           0           0                                0.00 
+          2                          REQ_TIME3[21]           0           0                                0.00 
+          2                          REQ_TIME3[20]           0           0                                0.00 
+          2                           REQ_TIME3[1]           1           1                              100.00 
+          2                          REQ_TIME3[19]           0           0                                0.00 
+          2                          REQ_TIME3[18]           0           0                                0.00 
+          2                          REQ_TIME3[17]           0           0                                0.00 
+          2                          REQ_TIME3[16]           0           0                                0.00 
+          2                          REQ_TIME3[15]           0           0                                0.00 
+          2                          REQ_TIME3[14]           0           0                                0.00 
+          2                          REQ_TIME3[13]           0           0                                0.00 
+          2                          REQ_TIME3[12]           0           0                                0.00 
+          2                          REQ_TIME3[11]           0           0                                0.00 
+          2                          REQ_TIME3[10]           0           0                                0.00 
+          2                           REQ_TIME3[0]           1           1                              100.00 
+          2                           REQ_TIME2[9]           0           0                                0.00 
+          2                           REQ_TIME2[8]           0           0                                0.00 
+          2                           REQ_TIME2[7]           0           0                                0.00 
+          2                           REQ_TIME2[6]           1           1                              100.00 
+          2                           REQ_TIME2[5]           1           1                              100.00 
+          2                           REQ_TIME2[4]           1           1                              100.00 
+          2                           REQ_TIME2[3]           1           1                              100.00 
+          2                          REQ_TIME2[31]           0           0                                0.00 
+          2                          REQ_TIME2[30]           0           0                                0.00 
+          2                           REQ_TIME2[2]           1           1                              100.00 
+          2                          REQ_TIME2[29]           0           0                                0.00 
+          2                          REQ_TIME2[28]           0           0                                0.00 
+          2                          REQ_TIME2[27]           0           0                                0.00 
+          2                          REQ_TIME2[26]           0           0                                0.00 
+          2                          REQ_TIME2[25]           0           0                                0.00 
+          2                          REQ_TIME2[24]           0           0                                0.00 
+          2                          REQ_TIME2[23]           0           0                                0.00 
+          2                          REQ_TIME2[22]           0           0                                0.00 
+          2                          REQ_TIME2[21]           0           0                                0.00 
+          2                          REQ_TIME2[20]           0           0                                0.00 
+          2                           REQ_TIME2[1]           1           1                              100.00 
+          2                          REQ_TIME2[19]           0           0                                0.00 
+          2                          REQ_TIME2[18]           0           0                                0.00 
+          2                          REQ_TIME2[17]           0           0                                0.00 
+          2                          REQ_TIME2[16]           0           0                                0.00 
+          2                          REQ_TIME2[15]           0           0                                0.00 
+          2                          REQ_TIME2[14]           0           0                                0.00 
+          2                          REQ_TIME2[13]           0           0                                0.00 
+          2                          REQ_TIME2[12]           0           0                                0.00 
+          2                          REQ_TIME2[11]           0           0                                0.00 
+          2                          REQ_TIME2[10]           0           0                                0.00 
+          2                           REQ_TIME2[0]           1           1                              100.00 
+          2                           REQ_TIME1[9]           0           0                                0.00 
+          2                           REQ_TIME1[8]           0           0                                0.00 
+          2                           REQ_TIME1[7]           0           0                                0.00 
+          2                           REQ_TIME1[6]           1           1                              100.00 
+          2                           REQ_TIME1[5]           1           1                              100.00 
+          2                           REQ_TIME1[4]           1           1                              100.00 
+          2                           REQ_TIME1[3]           1           1                              100.00 
+          2                          REQ_TIME1[31]           0           0                                0.00 
+          2                          REQ_TIME1[30]           0           0                                0.00 
+          2                           REQ_TIME1[2]           1           1                              100.00 
+          2                          REQ_TIME1[29]           0           0                                0.00 
+          2                          REQ_TIME1[28]           0           0                                0.00 
+          2                          REQ_TIME1[27]           0           0                                0.00 
+          2                          REQ_TIME1[26]           0           0                                0.00 
+          2                          REQ_TIME1[25]           0           0                                0.00 
+          2                          REQ_TIME1[24]           0           0                                0.00 
+          2                          REQ_TIME1[23]           0           0                                0.00 
+          2                          REQ_TIME1[22]           0           0                                0.00 
+          2                          REQ_TIME1[21]           0           0                                0.00 
+          2                          REQ_TIME1[20]           0           0                                0.00 
+          2                           REQ_TIME1[1]           1           1                              100.00 
+          2                          REQ_TIME1[19]           0           0                                0.00 
+          2                          REQ_TIME1[18]           0           0                                0.00 
+          2                          REQ_TIME1[17]           0           0                                0.00 
+          2                          REQ_TIME1[16]           0           0                                0.00 
+          2                          REQ_TIME1[15]           0           0                                0.00 
+          2                          REQ_TIME1[14]           0           0                                0.00 
+          2                          REQ_TIME1[13]           0           0                                0.00 
+          2                          REQ_TIME1[12]           0           0                                0.00 
+          2                          REQ_TIME1[11]           0           0                                0.00 
+          2                          REQ_TIME1[10]           0           0                                0.00 
+          2                           REQ_TIME1[0]           1           1                              100.00 
+          2                           REQ_TIME0[9]           0           0                                0.00 
+          2                           REQ_TIME0[8]           0           0                                0.00 
+          2                           REQ_TIME0[7]           0           0                                0.00 
+          2                           REQ_TIME0[6]           1           1                              100.00 
+          2                           REQ_TIME0[5]           1           1                              100.00 
+          2                           REQ_TIME0[4]           1           1                              100.00 
+          2                           REQ_TIME0[3]           1           1                              100.00 
+          2                          REQ_TIME0[31]           0           0                                0.00 
+          2                          REQ_TIME0[30]           0           0                                0.00 
+          2                           REQ_TIME0[2]           1           1                              100.00 
+          2                          REQ_TIME0[29]           0           0                                0.00 
+          2                          REQ_TIME0[28]           0           0                                0.00 
+          2                          REQ_TIME0[27]           0           0                                0.00 
+          2                          REQ_TIME0[26]           0           0                                0.00 
+          2                          REQ_TIME0[25]           0           0                                0.00 
+          2                          REQ_TIME0[24]           0           0                                0.00 
+          2                          REQ_TIME0[23]           0           0                                0.00 
+          2                          REQ_TIME0[22]           0           0                                0.00 
+          2                          REQ_TIME0[21]           0           0                                0.00 
+          2                          REQ_TIME0[20]           0           0                                0.00 
+          2                           REQ_TIME0[1]           1           1                              100.00 
+          2                          REQ_TIME0[19]           0           0                                0.00 
+          2                          REQ_TIME0[18]           0           0                                0.00 
+          2                          REQ_TIME0[17]           0           0                                0.00 
+          2                          REQ_TIME0[16]           0           0                                0.00 
+          2                          REQ_TIME0[15]           0           0                                0.00 
+          2                          REQ_TIME0[14]           0           0                                0.00 
+          2                          REQ_TIME0[13]           0           0                                0.00 
+          2                          REQ_TIME0[12]           0           0                                0.00 
+          2                          REQ_TIME0[11]           0           0                                0.00 
+          2                          REQ_TIME0[10]           0           0                                0.00 
+          2                           REQ_TIME0[0]           1           1                              100.00 
+          3                             REQUEST[3]           1           1                              100.00 
+          3                             REQUEST[2]           1           1                              100.00 
+          3                             REQUEST[1]           1           1                              100.00 
+          3                             REQUEST[0]           1           1                              100.00 
+          3                               GRANT[3]           1           1                              100.00 
+          3                               GRANT[2]           1           1                              100.00 
+          3                               GRANT[1]           1           1                              100.00 
+          3                               GRANT[0]           1           1                              100.00 
+          3                             GEN_REQ[3]           1           1                              100.00 
+          3                             GEN_REQ[2]           1           1                              100.00 
+          3                             GEN_REQ[1]           1           1                              100.00 
+          3                             GEN_REQ[0]           1           1                              100.00 
+          4                                  RESET           1           1                              100.00 
+         16                                    clk           1           1                              100.00 
+
+Total Node Count     =        143 
+Toggled Node Count   =         43 
+Untoggled Node Count =        100 
+
+Toggle Coverage      =      30.06% (86 of 286 bins)
+
+
+Total Coverage By File (code coverage only, filtered view): 84.41%
+

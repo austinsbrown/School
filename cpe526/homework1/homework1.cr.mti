@@ -1,0 +1,82 @@
+/home/student/asb0034/cpe526/homework1/converter_beh_arch.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/converter_beh_arch.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling architecture BEHAVE of CONVERTER
+-- Loading entity CONVERTER
+
+} {} {}} /home/student/asb0034/cpe526/homework1/converter_entity.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/converter_entity.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling entity CONVERTER
+
+} {} {}} /home/student/asb0034/cpe526/homework1/config_tb_b.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/config_tb_b.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling configuration BEHAVIORAL
+-- Loading entity TEST_BENCH
+-- Loading architecture CONVERTER_TEST of TEST_BENCH
+-- Loading entity PULSE_GEN
+-- Loading entity CONVERTER
+
+} {} {}} /home/student/asb0034/cpe526/homework1/converter_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/converter_tb.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling entity TEST_BENCH
+-- Compiling architecture CONVERTER_TEST of TEST_BENCH
+-- Loading entity PULSE_GEN
+
+} {} {}} /home/student/asb0034/cpe526/homework1/converter_str_arch.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/converter_str_arch.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling entity AND3
+-- Compiling architecture BEHAVE of AND3
+-- Compiling entity AND2
+-- Compiling architecture BEHAVE of AND2
+-- Compiling entity OR3
+-- Compiling architecture BEHAVE of OR3
+-- Compiling entity OR4
+-- Compiling architecture BEHAVE of OR4
+-- Compiling entity OR5
+-- Compiling architecture BEHAVE of OR5
+-- Compiling entity INV
+-- Compiling architecture BEHAVE of INV
+-- Compiling architecture STRUCTURAL of CONVERTER
+-- Loading entity CONVERTER
+-- Loading entity AND2
+-- Loading entity AND3
+-- Loading entity OR3
+-- Loading entity OR4
+-- Loading entity OR5
+-- Loading entity INV
+
+} {} {}} /home/student/asb0034/cpe526/homework1/config_tb_s.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/config_tb_s.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling configuration STRUCTURAL
+-- Loading entity TEST_BENCH
+-- Loading architecture CONVERTER_TEST of TEST_BENCH
+-- Loading entity PULSE_GEN
+-- Loading entity CONVERTER
+
+} {} {}} /home/student/asb0034/cpe526/homework1/pulse_gen.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/pulse_gen.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling entity PULSE_GEN
+-- Compiling architecture ALG of PULSE_GEN
+
+} {} {}} /home/student/asb0034/cpe526/homework1/converter_df_arch.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/converter_df_arch.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling architecture DATAFLOW of CONVERTER
+-- Loading entity CONVERTER
+
+} {} {}} /home/student/asb0034/cpe526/homework1/config_tb_d.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework1/config_tb_d.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Compiling configuration DATAFLOW
+-- Loading entity TEST_BENCH
+-- Loading architecture CONVERTER_TEST of TEST_BENCH
+-- Loading entity PULSE_GEN
+-- Loading entity CONVERTER
+
+} {} {}}

@@ -1,0 +1,335 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/student/asb0034/cpe526/homework2
+T_opt
+!s110 1615140695
+V7@VCl9he8]cPXV>KB3<`C3
+04 12 4 work top_level_tb test 1
+=1-588a5aec9592-60451757-bddc5-1f6bf
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.1;71
+T_opt1
+!s110 1614961080
+V9ITz;:T:IN3I8b09d@Le^3
+Z4 04 16 4 work clock_divider_tb test 1
+=1-588a5aec9592-604259b8-bb4be-4165d
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1614897972
+Vi8_=UZ61:AANHJLSdbQM?1
+R4
+=1-d89ef39879d3-60416334-993c9-1aad
+o-quiet -auto_acc_if_foreign -work work
+R2
+n@_opt2
+R3
+R0
+Eclock_divider
+Z5 w1614961065
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 150
+Z8 d/home/student/asb0034/cpe526/homework3/vsim
+Z9 8/home/student/asb0034/cpe526/homework3/vsim/clock_divider.vhd
+Z10 F/home/student/asb0034/cpe526/homework3/vsim/clock_divider.vhd
+l0
+L4 1
+V5?XFzOi9=>X>gI5CLkB8V2
+!s100 kWFYh1fJQdflD<X>2?B4E2
+Z11 OL;C;2020.1;71
+32
+Z12 !s110 1615140680
+!i10b 1
+Z13 !s108 1615140680.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework3/vsim/clock_divider.vhd|
+Z15 !s107 /home/student/asb0034/cpe526/homework3/vsim/clock_divider.vhd|
+!i113 0
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1 CvgOpt 0
+Abehav
+R6
+R7
+DEx4 work 13 clock_divider 0 22 5?XFzOi9=>X>gI5CLkB8V2
+!i122 150
+l15
+L12 21
+Ve2=[DGLo^nL4^PdESj;jF1
+!s100 KFc4G6@izL4?6EPT0aPA;2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Eclock_divider_tb
+Z18 w1614961056
+R6
+R7
+!i122 151
+R8
+Z19 8/home/student/asb0034/cpe526/homework3/vsim/clock_divider_tb.vhd
+Z20 F/home/student/asb0034/cpe526/homework3/vsim/clock_divider_tb.vhd
+l0
+L5 1
+V0d_0McZcfO1a31B^R1B_92
+!s100 =_fEF=_]:;n1^6Mi>oEoc0
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework3/vsim/clock_divider_tb.vhd|
+Z22 !s107 /home/student/asb0034/cpe526/homework3/vsim/clock_divider_tb.vhd|
+!i113 0
+R16
+R17
+Atest
+R6
+R7
+DEx4 work 16 clock_divider_tb 0 22 0d_0McZcfO1a31B^R1B_92
+!i122 151
+l20
+L8 34
+VMFUNRPMb1^1<nEilCECCE3
+!s100 H_2Ch0gnAl2IClWSS`adI0
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 0
+R16
+R17
+Elight_test_bench
+Z23 w1614960438
+Z24 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z25 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R6
+R7
+!i122 95
+R8
+Z26 8/home/student/asb0034/cpe526/homework3/vsim/top_level_tb.vhd
+Z27 F/home/student/asb0034/cpe526/homework3/vsim/top_level_tb.vhd
+l0
+L8 1
+VE552i8?V_LfFj5Rn^icG42
+!s100 2BPIEN1Q0PBMKB5<VcOLe0
+R11
+32
+Z28 !s110 1614961069
+!i10b 1
+Z29 !s108 1614961069.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework3/vsim/top_level_tb.vhd|
+Z31 !s107 /home/student/asb0034/cpe526/homework3/vsim/top_level_tb.vhd|
+!i113 0
+R16
+R17
+Atest
+R24
+R25
+DEx4 work 16 light_test_bench 0 22 E552i8?V_LfFj5Rn^icG42
+R6
+R7
+!i122 95
+l42
+L14 93
+VN3Seg0W:ek59<gcDG?0]R3
+!s100 m@9zo[k:c?M`coG]V_iS80
+R11
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R16
+R17
+Estop_light_logic
+Z32 w1615140672
+R6
+R7
+!i122 152
+R8
+Z33 8/home/student/asb0034/cpe526/homework3/vsim/stop_light_logic.vhd
+Z34 F/home/student/asb0034/cpe526/homework3/vsim/stop_light_logic.vhd
+l0
+L4 1
+Vno6`fY[5@z2FO5^L@oPCD0
+!s100 9T5k4iQZMzcV4a[Y^lN<X0
+R11
+32
+R12
+!i10b 1
+R13
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework3/vsim/stop_light_logic.vhd|
+Z36 !s107 /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic.vhd|
+!i113 0
+R16
+R17
+Abehav
+R6
+R7
+DEx4 work 16 stop_light_logic 0 22 no6`fY[5@z2FO5^L@oPCD0
+!i122 152
+l23
+L17 69
+Vf;<d@cTL51<1REU<jnRzQ2
+!s100 BJMR<dHH^IGMkT1bAedNZ2
+R11
+32
+R12
+!i10b 1
+R13
+R35
+R36
+!i113 0
+R16
+R17
+Estop_light_logic_tb
+Z37 w1614879756
+R6
+R7
+!i122 153
+R8
+Z38 8/home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd
+Z39 F/home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd
+l0
+L4 1
+V=X7`=2@bP4fhGY_LoFZa20
+!s100 e3WW<z4I[GSI5e<[nV7g]0
+R11
+32
+R12
+!i10b 1
+R13
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd|
+Z41 !s107 /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd|
+!i113 0
+R16
+R17
+Atest
+R6
+R7
+DEx4 work 19 stop_light_logic_tb 0 22 =X7`=2@bP4fhGY_LoFZa20
+!i122 153
+l23
+L7 55
+Vog5M4Z7z:@Vi]RRJ?7?kE2
+!s100 <=:NdmJ:a<Ka?S_BTA3G=3
+R11
+32
+R12
+!i10b 1
+R13
+R40
+R41
+!i113 0
+R16
+R17
+Etop_level
+Z42 w1614954909
+R6
+R7
+!i122 154
+R8
+Z43 8/home/student/asb0034/cpe526/homework3/vsim/top_level.vhd
+Z44 F/home/student/asb0034/cpe526/homework3/vsim/top_level.vhd
+l0
+L4 1
+V;8UZgo3V8MVAB@XhKSh601
+!s100 k^7V6kmNIh@em]Kao5LJX1
+R11
+32
+R12
+!i10b 1
+R13
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework3/vsim/top_level.vhd|
+Z46 !s107 /home/student/asb0034/cpe526/homework3/vsim/top_level.vhd|
+!i113 0
+R16
+R17
+Abehav
+R6
+R7
+DEx4 work 9 top_level 0 22 ;8UZgo3V8MVAB@XhKSh601
+!i122 154
+l40
+L17 40
+VnPJXG_YHS`=bc`H]VzZO13
+!s100 ^]dZK>?:N>>MSgbQ:4^X01
+R11
+32
+R12
+!i10b 1
+R13
+R45
+R46
+!i113 0
+R16
+R17
+Etop_level_tb
+Z47 w1614963036
+R24
+R25
+R6
+R7
+!i122 155
+R8
+R26
+R27
+l0
+L8 1
+VNR4V;JVK4B[MfIeMi3jCD0
+!s100 ]3i];HzQ:?J^`8Y1gOkUR3
+R11
+32
+Z48 !s110 1615140681
+!i10b 1
+Z49 !s108 1615140681.000000
+R30
+R31
+!i113 0
+R16
+R17
+Atest
+R24
+R25
+DEx4 work 12 top_level_tb 0 22 NR4V;JVK4B[MfIeMi3jCD0
+R6
+R7
+!i122 155
+l42
+L14 81
+VJm681;V:2QfM8a5eMA;8F3
+!s100 d1le[nG]=MM<@B<5^Wl131
+R11
+32
+R48
+!i10b 1
+R49
+R30
+R31
+!i113 0
+R16
+R17

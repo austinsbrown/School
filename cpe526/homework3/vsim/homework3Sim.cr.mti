@@ -1,0 +1,51 @@
+/home/student/asb0034/cpe526/homework3/vsim/top_level_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework3/vsim/top_level_tb.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity top_level_tb
+-- Compiling architecture TEST of top_level_tb
+
+} {} {}} /home/student/asb0034/cpe526/homework3/vsim/clock_divider_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework3/vsim/clock_divider_tb.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity clock_divider_tb
+-- Compiling architecture test of clock_divider_tb
+
+} {} {}} /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic_tb.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity stop_light_logic_tb
+-- Compiling architecture test of stop_light_logic_tb
+
+} {} {}} /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework3/vsim/stop_light_logic.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity stop_light_logic
+-- Compiling architecture behav of stop_light_logic
+
+} {} {}} /home/student/asb0034/cpe526/homework3/vsim/clock_divider.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework3/vsim/clock_divider.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity clock_divider
+-- Compiling architecture behav of clock_divider
+
+} {} {}} /home/student/asb0034/cpe526/homework3/vsim/top_level.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/student/asb0034/cpe526/homework3/vsim/top_level.vhd
+QuestaSim-64 vcom 2020.1 Compiler 2020.01 Jan 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity top_level
+-- Compiling architecture behav of top_level
+
+} {} {}}

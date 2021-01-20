@@ -1,0 +1,187 @@
+# //  Questa Sim-64
+# //  Version 2020.1 linux_x86_64 Jan 28 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project homework3Sim
+# Load canceled
+# Break key hit
+vsim work.clock_divider_tb -voptargs=+acc
+# vsim work.clock_divider_tb -voptargs="+acc" 
+# Start time: 15:50:56 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+add wave -r /*
+run
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 15:53:14 on Mar 04,2021, Elapsed time: 0:02:18
+# Errors: 0, Warnings: 1
+# Compile of clock_divider.vhd was successful.
+# Compile of clock_divider_tb.vhd was successful.
+# Compile of stop_light_logic.vhd was successful.
+# Compile of stop_light_logic_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.clock_divider_tb
+# vsim -voptargs="+acc" work.clock_divider_tb 
+# Start time: 15:53:32 on Mar 04,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+add wave -r /*
+vsim -voptargs=+acc work.clock_divider_tb
+# End time: 15:54:05 on Mar 04,2021, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.clock_divider_tb 
+# Start time: 15:54:05 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+run
+add wave -r /*
+quit -sim
+# End time: 15:58:33 on Mar 04,2021, Elapsed time: 0:04:28
+# Errors: 0, Warnings: 1
+# Compile of clock_divider.vhd was successful.
+# Compile of clock_divider_tb.vhd was successful.
+# Compile of stop_light_logic.vhd was successful.
+# Compile of stop_light_logic_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.clock_divider_tb
+# vsim -voptargs="+acc" work.clock_divider_tb 
+# Start time: 15:59:59 on Mar 04,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+add wave -r /*
+run
+quit -sim
+# End time: 16:42:50 on Mar 04,2021, Elapsed time: 0:42:51
+# Errors: 0, Warnings: 2
+vsim -voptargs=+acc work.clock_divider_tb
+# vsim -voptargs="+acc" work.clock_divider_tb 
+# Start time: 16:42:58 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+add wave -r /*
+run
+quit -sim
+# End time: 16:44:45 on Mar 04,2021, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 1
+# Compile of clock_divider.vhd was successful.
+# Compile of clock_divider_tb.vhd was successful.
+# Compile of stop_light_logic.vhd was successful.
+# Compile of stop_light_logic_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.clock_divider_tb
+# vsim -voptargs="+acc" work.clock_divider_tb 
+# Start time: 16:45:09 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+add wave -r /*
+run
+quit -sim
+# End time: 16:45:59 on Mar 04,2021, Elapsed time: 0:00:50
+# Errors: 0, Warnings: 2
+# Compile of clock_divider.vhd was successful.
+# Compile of clock_divider_tb.vhd was successful.
+# Compile of stop_light_logic.vhd was successful.
+# Compile of stop_light_logic_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+# Load canceled
+vsim work.clock_divider_tb
+# vsim work.clock_divider_tb 
+# Start time: 16:46:12 on Mar 04,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+add wave -r /*
+run
+# Break key hit
+quit -sim
+# End time: 16:46:43 on Mar 04,2021, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 2
+vsim work.clock_divider_tb -voptargs=+acc
+# vsim work.clock_divider_tb -voptargs="+acc" 
+# Start time: 16:46:52 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+add wave -r /*
+run
+quit -sim
+# End time: 16:49:36 on Mar 04,2021, Elapsed time: 0:02:44
+# Errors: 0, Warnings: 1
+# Load canceled
+# Compile of clock_divider.vhd was successful.
+# Compile of clock_divider_tb.vhd was successful.
+# Compile of stop_light_logic.vhd was successful.
+# Compile of stop_light_logic_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.clock_divider_tb
+# vsim -voptargs="+acc" work.clock_divider_tb 
+# Start time: 16:50:00 on Mar 04,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+add wave -r /*
+run
+quit -sim
+# End time: 16:51:00 on Mar 04,2021, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 2
+# Compile of clock_divider.vhd was successful.
+# Compile of clock_divider_tb.vhd was successful.
+# Compile of stop_light_logic.vhd was successful.
+# Compile of stop_light_logic_tb.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.clock_divider_tb
+# vsim -voptargs="+acc" work.clock_divider_tb 
+# Start time: 16:51:42 on Mar 04,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clock_divider_tb(test)#1
+# Loading work.clock_divider(behav)#1
+add wave -r /*
+run
+# End time: 16:52:34 on Mar 04,2021, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 2

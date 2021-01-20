@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /home/student/asb0034/cpe526/homework3/quartus/clock_divider.vhd
+source_file = 1, /home/student/asb0034/cpe526/homework3/quartus/stop_light_logic.vhd
+source_file = 1, /home/student/asb0034/cpe526/homework3/quartus/top_level.vhd
+source_file = 1, /apps/altera16/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /apps/altera16/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /apps/altera16/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /apps/altera16/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, /home/student/asb0034/cpe526/homework3/quartus/db/top_level.cbx.xml
+design_name = top_level
+instance = comp, \red~output\, red~output, top_level, 1
+instance = comp, \yellow~output\, yellow~output, top_level, 1
+instance = comp, \green~output\, green~output, top_level, 1
+instance = comp, \clock~input\, clock~input, top_level, 1
+instance = comp, \start~input\, start~input, top_level, 1
+instance = comp, \reset~input\, reset~input, top_level, 1

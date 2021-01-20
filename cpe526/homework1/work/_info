@@ -1,0 +1,498 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/student/asb0034/cpe526/homework1
+T_opt
+!s110 1612213409
+VlPfz6cLJJ=7]8gObQ?IcJ1
+04 10 0 work structural 1
+=1-588a5aec9592-60186ca1-a6441-39efb
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.1;71
+T_opt1
+!s110 1611936121
+VRU<K6Q_k[7FeekB>2o[M62
+04 10 0 work behavioral 1
+=1-588a5aec9592-60143178-e9332-1f477
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1611937233
+VHSj3i<S]_Ue0jU:[L<hH91
+04 8 0 work dataflow 1
+=1-588a5aec9592-601435d1-5de74-234c5
+R1
+R2
+n@_opt2
+R3
+R0
+Eand2
+Z4 w1611872519
+!i122 16
+R0
+Z5 8/home/student/asb0034/cpe526/homework1/converter_str_arch.vhd
+Z6 F/home/student/asb0034/cpe526/homework1/converter_str_arch.vhd
+l0
+L11 1
+VeEkJTcDEY_25UKIfgimDO3
+!s100 W<zGR<9A=Zid]k4CRgR=_3
+Z7 OL;C;2020.1;71
+32
+Z8 !s110 1611932917
+!i10b 1
+Z9 !s108 1611932917.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/converter_str_arch.vhd|
+Z11 !s107 /home/student/asb0034/cpe526/homework1/converter_str_arch.vhd|
+!i113 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehave
+Z14 DEx4 work 4 and2 0 22 eEkJTcDEY_25UKIfgimDO3
+!i122 16
+l17
+L16 4
+VKH1IZalI31h5a_DH_FfG?2
+!s100 GiEA:3KnLd3@mYdD6F?S80
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eand3
+R4
+!i122 16
+R0
+R5
+R6
+l0
+L1 1
+V4cTmP3foJke0CS_T8EdQY3
+!s100 ?l0lRPkHSceV2_mXh;=3G0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Abehave
+Z15 DEx4 work 4 and3 0 22 4cTmP3foJke0CS_T8EdQY3
+!i122 16
+l7
+L6 4
+V7<MP17T>SUldA0WF8A`fG0
+!s100 g4AUN4h_IOYgHYz<Bl6Y_3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Cbehavioral
+Z16 eTEST_BENCH
+Z17 aCONVERTER_TEST
+Z18 DEx4 work 9 pulse_gen 0 22 GCoGoZX>NKIU5oV>0G<Vh3
+Z19 DEx4 work 9 converter 0 22 @BPUkhjKP5H`EbDMk36<Z2
+Z20 DAx4 work 10 test_bench 14 converter_test 22 Zl2ezh=0KRgm>3lRDzi8l3
+Z21 DEx4 work 10 test_bench 0 22 j>BQ5[B^<obzC>j@3V8Iz0
+!i122 20
+w1611872518
+R0
+8/home/student/asb0034/cpe526/homework1/config_tb_b.vhd
+F/home/student/asb0034/cpe526/homework1/config_tb_b.vhd
+l0
+L1 1
+V`NnAhXVaUH`7TQ1U6G1i`0
+!s100 Kl=bOVj:`hh=Y0VC7>kQG3
+R7
+32
+Z22 !s110 1611932918
+!i10b 1
+Z23 !s108 1611932918.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/config_tb_b.vhd|
+!s107 /home/student/asb0034/cpe526/homework1/config_tb_b.vhd|
+!i113 0
+R12
+R13
+Econverter
+R4
+!i122 15
+R0
+8/home/student/asb0034/cpe526/homework1/converter_entity.vhd
+F/home/student/asb0034/cpe526/homework1/converter_entity.vhd
+l0
+L1 1
+V@BPUkhjKP5H`EbDMk36<Z2
+!s100 C0IN0cb2AkDiQBM0mBAC;2
+R7
+32
+R8
+!i10b 1
+R9
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/converter_entity.vhd|
+!s107 /home/student/asb0034/cpe526/homework1/converter_entity.vhd|
+!i113 0
+R12
+R13
+Adataflow
+R19
+!i122 21
+8/home/student/asb0034/cpe526/homework1/converter_df_arch.vhd
+F/home/student/asb0034/cpe526/homework1/converter_df_arch.vhd
+l2
+L1 13
+Vii0KHNT[ARNQMm@V8a6JT1
+!s100 5j:S3C_NF6T?hmW<73N8?2
+R7
+32
+R22
+!i10b 1
+R23
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/converter_df_arch.vhd|
+!s107 /home/student/asb0034/cpe526/homework1/converter_df_arch.vhd|
+!i113 0
+R12
+R13
+Abehave
+R19
+!i122 20
+8/home/student/asb0034/cpe526/homework1/converter_beh_arch.vhd
+F/home/student/asb0034/cpe526/homework1/converter_beh_arch.vhd
+l2
+L1 21
+V^95hU;U19G:>VIzKVOA8H2
+!s100 gcB4z?N8XNAz18beMk?fa3
+R7
+32
+R22
+!i10b 1
+R23
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/converter_beh_arch.vhd|
+!s107 /home/student/asb0034/cpe526/homework1/converter_beh_arch.vhd|
+!i113 0
+R12
+R13
+Astructural
+Z24 DEx4 work 3 inv 0 22 Sz;FeKJ>mQkz7dU5fLk8b1
+Z25 DEx4 work 3 or5 0 22 BhH:`E[OY0THjCCi@n>3T2
+Z26 DEx4 work 3 or4 0 22 z?bZ23MEDak_@baCKEF8?3
+Z27 DEx4 work 3 or3 0 22 [CdAY42]cCcFIJ?2]T;Y^1
+R15
+R14
+R19
+!i122 16
+R5
+R6
+l103
+L61 65
+VUSDjfbN9eU8fX?L<n]Eal0
+!s100 3:_8lnW:3B0<H_Zh@McWU3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Cdataflow
+R16
+R17
+R18
+R19
+R20
+R21
+!i122 18
+R4
+R0
+8/home/student/asb0034/cpe526/homework1/config_tb_d.vhd
+F/home/student/asb0034/cpe526/homework1/config_tb_d.vhd
+l0
+L1 1
+VI4h;Q]^X4E32aENkC?`Ng2
+!s100 VJGU[IRo]8UGhk[K^oilz3
+R7
+32
+R22
+!i10b 0
+R23
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/config_tb_d.vhd|
+!s107 /home/student/asb0034/cpe526/homework1/config_tb_d.vhd|
+!i113 0
+R12
+R13
+Einv
+R4
+!i122 16
+R0
+R5
+R6
+l0
+L51 1
+VSz;FeKJ>mQkz7dU5fLk8b1
+!s100 <PbLTL:BmB:e7^zggED^c1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Abehave
+R24
+!i122 16
+l57
+L56 4
+V8l`_^OBA:ZllK6:P1^F5A2
+!s100 2k;dH4bEEa_fNW>SUmBZ]0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eor3
+R4
+!i122 16
+R0
+R5
+R6
+l0
+L21 1
+V[CdAY42]cCcFIJ?2]T;Y^1
+!s100 _R65YC2Sl?m1QhLX7[5033
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Abehave
+R27
+!i122 16
+l27
+L26 4
+VmUX_AT:]EYY=HAL2=@NLg1
+!s100 Y]Gg>1`m2NEmPzFeOYaao1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eor4
+R4
+!i122 16
+R0
+R5
+R6
+l0
+L31 1
+Vz?bZ23MEDak_@baCKEF8?3
+!s100 7O<I=5?FJVc70?C6aPXo?1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Abehave
+R26
+!i122 16
+l37
+L36 4
+V6:BUlGfmdYz<SgB4_Xii_2
+!s100 G3DdlTHaFST0^UWJm6T0T2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eor5
+R4
+!i122 16
+R0
+R5
+R6
+l0
+L41 1
+VBhH:`E[OY0THjCCi@n>3T2
+!s100 @1:Z:mUdjo:DR[4TUWAc?1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Abehave
+R25
+!i122 16
+l47
+L46 4
+V]zZc]cI2BhBgJLz7_XB6]0
+!s100 3;lk;1dG@]Fm1@^RoY[cI3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Epulse_gen
+R4
+!i122 17
+R0
+Z28 8/home/student/asb0034/cpe526/homework1/pulse_gen.vhd
+Z29 F/home/student/asb0034/cpe526/homework1/pulse_gen.vhd
+l0
+L1 1
+VGCoGoZX>NKIU5oV>0G<Vh3
+!s100 U[R5F1e<3;dJ3DG67Ndmh2
+R7
+32
+R22
+!i10b 1
+R9
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/pulse_gen.vhd|
+Z31 !s107 /home/student/asb0034/cpe526/homework1/pulse_gen.vhd|
+!i113 0
+R12
+R13
+Aalg
+R18
+!i122 17
+l23
+L5 26
+Va4KUM00HbO`jCZ^h^SH9z0
+!s100 AbiJ:Ahz>cSDLgHPSAX0P1
+R7
+32
+R22
+!i10b 1
+R9
+R30
+R31
+!i113 0
+R12
+R13
+Cstructural
+R16
+R17
+R18
+R19
+R20
+R21
+!i122 19
+R4
+R0
+8/home/student/asb0034/cpe526/homework1/config_tb_s.vhd
+F/home/student/asb0034/cpe526/homework1/config_tb_s.vhd
+l0
+L1 1
+VIKIbjWAUJfSD7j^Ff88nN1
+!s100 ibF3W>i4J3d6c0cb5S68l1
+R7
+32
+R22
+!i10b 0
+R23
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/config_tb_s.vhd|
+!s107 /home/student/asb0034/cpe526/homework1/config_tb_s.vhd|
+!i113 0
+R12
+R13
+Etest_bench
+R4
+!i122 21
+R0
+Z32 8/home/student/asb0034/cpe526/homework1/converter_tb.vhd
+Z33 F/home/student/asb0034/cpe526/homework1/converter_tb.vhd
+l0
+L2 1
+Vj>BQ5[B^<obzC>j@3V8Iz0
+!s100 GSfJiUnD97X]=0Z3fHIlW0
+R7
+32
+R22
+!i10b 1
+R23
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/student/asb0034/cpe526/homework1/converter_tb.vhd|
+Z35 !s107 /home/student/asb0034/cpe526/homework1/converter_tb.vhd|
+!i113 0
+R12
+R13
+Aconverter_test
+R18
+R21
+!i122 21
+l22
+L5 31
+VZl2ezh=0KRgm>3lRDzi8l3
+!s100 QQK7@MdhM64oT9DcTbWkj3
+R7
+32
+R22
+!i10b 1
+R23
+R34
+R35
+!i113 0
+R12
+R13
